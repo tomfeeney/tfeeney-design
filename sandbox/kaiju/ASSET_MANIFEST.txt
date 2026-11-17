@@ -1,0 +1,127 @@
+Kaiju Run Full Build Package - Atomic Roar XL Icon
+
+Changes:
+- Increased the HUD Atomic Roar icon to 80x80.
+- Shifted the icon anchor so it stays aligned with the ability label.
+
+Kaiju Run — full build with all uploaded assets
+Generated: 2026-04-28 06:13:35 UTC
+
+How to use:
+1. Unzip this package.
+2. Keep index.html and the assets folder together.
+3. Open index.html in a browser.
+
+What changed in this rebuild:
+- Included the full uploaded assets folder, not just the handful of files from the last package.
+- Removed __MACOSX metadata and .DS_Store.
+- Added assets/kaiju-roar.svg as an alias for uploaded assets/kaiju_roar.svg to match the current index.html reference.
+
+Bundled assets:
+- assets/background.png
+- assets/background_mecha.png
+- assets/bg-tokyo-grn.webp
+- assets/bg-tokyo-red.webp
+- assets/bomb.webp
+- assets/destroyer.webp
+- assets/godzilla-base-new.webp
+- assets/godzilla-exact.webp
+- assets/godzilla-new.webp
+- assets/godzilla-shield-exact.webp
+- assets/godzilla-shield-new.webp
+- assets/godzilla-shield.webp
+- assets/godzilla.webp
+- assets/godzilla_glow.webp
+- assets/godzilla_roar.mp3
+- assets/icon-roar.png
+- assets/icon-roar.svg
+- assets/icon-shield.png
+- assets/icon-shield.svg
+- assets/jet_001.webp
+- assets/jet_002.webp
+- assets/jet_003.webp
+- assets/kaiju-roar.svg
+- assets/kaiju-roar.webp
+- assets/kaiju-shield.svg
+- assets/kaiju_roar.svg
+- assets/laser-weap-red.webp
+- assets/laser-weap.webp
+- assets/mecha-base-new.webp
+- assets/mecha-exact.webp
+- assets/mecha-new.webp
+- assets/mecha-shield-exact.webp
+- assets/mecha-shield-new.webp
+- assets/mecha-shield.webp
+- assets/mecha.webp
+- assets/mecha_glow.webp
+- assets/mecha_godzilla_roar.mp3
+- assets/roar-icon.webp
+- assets/shield-grn.webp
+- assets/shield-icon.webp
+- assets/shield-red.webp
+- assets/wave_blue.webp
+- assets/wave_paint.webp
+- assets/wave_plain.webp
+- assets/wave_red.webp
+
+Referenced asset check:
+OK assets/background.png
+OK assets/background_mecha.png
+OK assets/godzilla.webp
+OK assets/godzilla_glow.webp
+OK assets/mecha.webp
+OK assets/mecha_glow.webp
+OK assets/destroyer.webp
+OK assets/jet_001.webp
+OK assets/jet_002.webp
+OK assets/jet_003.webp
+OK assets/wave_plain.webp
+OK assets/wave_paint.webp
+OK assets/wave_blue.webp
+OK assets/wave_red.webp
+OK assets/laser-weap.webp
+OK assets/laser-weap-red.webp
+OK assets/bomb.webp
+OK assets/shield-grn.webp
+OK assets/shield-red.webp
+OK assets/godzilla-shield.webp
+OK assets/godzilla-base-new.webp
+OK assets/mecha-shield.webp
+OK assets/mecha-base-new.webp
+OK assets/godzilla-new.webp
+OK assets/godzilla-shield-new.webp
+OK assets/mecha-new.webp
+OK assets/mecha-shield-new.webp
+OK assets/godzilla-exact.webp
+OK assets/godzilla-shield-exact.webp
+OK assets/mecha-exact.webp
+OK assets/mecha-shield-exact.webp
+OK assets/godzilla_roar.mp3
+OK assets/mecha_godzilla_roar.mp3
+OK assets/kaiju-roar.webp
+OK assets/shield-icon.webp
+OK assets/roar-icon.webp
+OK assets/icon-shield.png
+OK assets/icon-roar.png
+OK assets/kaiju-shield.svg
+OK assets/kaiju-roar.svg
+OK assets/bg-tokyo-grn.webp
+OK assets/bg-tokyo-red.webp
+Missing count: 0
+
+
+Updated icon swap:
+- assets/kaiju-shield.svg replaced with newly uploaded shield icon
+- assets/kaiju-roar.svg replaced with newly uploaded roar icon
+- assets/icon-shield.svg mirrored to new shield icon
+- assets/icon-roar.svg mirrored to new roar icon
+
+Corrected icon mapping:
+- roar icon now uses the first uploaded SVG
+- shield icon now uses the second uploaded SVG
+
+Roar icon size increased for better HUD visibility.
+
+High score patch:
+- Fixed localStorage high-score loading/saving across keys.
+- Saves new high score immediately and prevents Enter from skipping score save on game over.

@@ -1,0 +1,69 @@
+# ----------------------------------------------------------------------
+# iguanaman.com security baseline
+# Upload this file to the public web root: /Portfolio/.htaccess or /htdocs/.htaccess
+# Canonical domain is https://iguanaman.com based on your current page metadata.
+# ----------------------------------------------------------------------
+
+Options -Indexes
+ServerSignature Off
+
+RewriteEngine On
+
+# Force HTTPS.
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Force non-www canonical domain.
+RewriteCond %{HTTP_HOST} ^www\.iguanaman\.com$ [NC]
+RewriteRule ^ https://iguanaman.com%{REQUEST_URI} [R=301,L]
+
+# Custom error pages.
+ErrorDocument 403 /customerrors/403.html
+ErrorDocument 404 /customerrors/404.html
+
+# Block deployment junk, hidden files/folders, source-control folders, archives, backups, raw design files, and OS metadata.
+RedirectMatch 404 (?i)(^|/)(__MACOSX|\.git|\.svn|\.hg)(/|$)
+RedirectMatch 404 (?i)(^|/)(archived)(/|$)
+RedirectMatch 404 (?i)\.(zip|bak|backup|old|orig|save|sql|sqlite|db|log|psd|pages)$
+RedirectMatch 404 (?i)(^|/)Thumbs\.db$
+RedirectMatch 404 (?i)(^|/)\.DS_Store$
+
+# Block sensitive file names even if uploaded accidentally.
+<FilesMatch "(^\.|composer\.(json|lock)$|package(-lock)?\.json$|yarn\.lock$|pnpm-lock\.yaml$|phpunit\.xml$|README(_PRODUCTION|_UPLOAD)?\.txt$|ASSET_MANIFEST\.txt$|REQUIRED_EXISTING_ASSETS\.txt$)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Security headers.
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+
+  # Enable after HTTPS has been tested on iguanaman.com and www.iguanaman.com.
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # Report-only CSP so you can test without breaking the portfolio or Kaiju prototype.
+  Header always set Content-Security-Policy-Report-Only "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self'"
+</IfModule>
+
+# Basic cache hygiene.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType audio/mpeg "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+</IfModule>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kaijū Run | 怪獣ラン | v0.96</title>
+<link rel="stylesheet" href="css/kaiju-run.css">
+</head>
+<body class="screen-effect">
+<div id="wrap">
+<canvas id="game"></canvas>
+<div class="banner hidden" id="banner"><strong id="bannerTitle">AI Director</strong><span id="bannerText">Scanning...</span></div>
+
+<div class="gameControlsHud hidden" id="gameControlsHud" aria-label="Game controls" aria-hidden="true">
+  <div class="gameControlsHudTitle">Game Controls</div>
+  <div class="gameControlsHudGrid">
+    <span><strong>Move</strong> WASD / Arrows</span>
+    <span><strong>Blast</strong> Space</span>
+    <span><strong>Roar</strong> R</span>
+    <span><strong>Submerge</strong> S / Down</span>
+    <span><strong>Pause</strong> P</span>
+    <span><strong>Mute</strong> M</span>
+  </div>
+</div>
+
+<div class="touchControls" id="touchControls" aria-label="Mobile game controls" aria-hidden="true">
+  <div class="touchMovePad" aria-label="Move">
+    <button type="button" class="touchBtn touchUp" data-touch-key="arrowup" aria-label="Move up">▲</button>
+    <button type="button" class="touchBtn touchLeft" data-touch-key="arrowleft" aria-label="Move left">◀</button>
+    <button type="button" class="touchBtn touchDown" data-touch-key="arrowdown" aria-label="Move down or submerge">▼</button>
+    <button type="button" class="touchBtn touchRight" data-touch-key="arrowright" aria-label="Move right">▶</button>
+  </div>
+  <div class="touchActionPad" aria-label="Actions">
+    <button type="button" class="touchBtn touchBlast" data-touch-key="space" aria-label="Hold to fire atomic blast">Blast</button>
+    <button type="button" class="touchBtn touchRoar" data-touch-action="roar" aria-label="Use atomic roar">Roar</button>
+    <button type="button" class="touchBtn touchMini" data-touch-action="pause" aria-label="Pause game">Pause</button>
+    <button type="button" class="touchBtn touchMini" data-touch-action="mute" aria-label="Toggle audio">Mute</button>
+  </div>
+</div>
+
+<div class="loadingScreen" id="loader" role="status" aria-live="polite">
+  <div class="loadingCard">
+    <div class="loadingEyebrow">Kaijū Awakening</div>
+    <h2 class="loadingTitle">Kaijū Run</h2>
+    <p class="loadingCopy">Defense Perimeter Activating…</p>
+    <div class="loadingTrack" aria-hidden="true"><div class="loadingFill" id="loadingFill"></div></div>
+    <div class="loadingStatus" id="loadingStatus">Loading 0%</div>
+  </div>
+</div>
+
+<div class="overlay" id="menu">
+  <div class="panel">
+    <div class="hero"><div><div class="eyebrow">Level 1</div><h1>Kaijū Run <span class="titlePipe">|</span> 怪獣ラン</h1></div></div>
+    <div class="body">
+      <p class="menuIntro"><span class="menuIntroDesktop">Crush the fighter jets, sink the destroyer, and break through Tokyo’s defenses. Hold down to submerge beneath the waves and vanish below the waterline.</span><span class="menuIntroMobile">Prove Your Kaijū Knowledge. Earn Your Rank.</span></p>
+      <div class="mobileTriviaOnlyNote" id="mobileTriviaOnlyNote"><strong>Mobile Defense Mode</strong><span>Kaijū Run needs a larger screen. Kaijū Trivia Challenge is cleared for mobile deployment.</span></div>
+      <div class="attractLine" id="attractLine">RAVAGE THE CITY</div>
+      <div class="choices">
+        <button class="choice selected" id="chooseGodzilla"><strong>Godzilla</strong><span>Unleash atomic fury and break through Tokyo’s defenses.</span></button>
+        <button class="choice" id="chooseMecha"><strong>Mechagodzilla</strong><span>Activate mechanized firepower and tear through the city.</span></button>
+        <button class="choice choiceTrivia" id="chooseTrivia"><strong>Kaijū Trivia Challenge</strong><span>Test your monster intel in a timed 12-question challenge.</span></button>
+      </div>
+      <div class="controls">
+        <div class="control"><strong>Move</strong>WASD / Arrow Keys</div>
+        <div class="control"><strong>Atomic Blast</strong>Space</div><div class="control"><strong>Atomic Roar</strong>R • once • drains energy + shield</div>
+        <div class="control"><strong>Atomic Shield</strong>3 auto charges • +5% per jet</div>
+        <div class="control controlTrivia"><strong>Kaijū Trivia</strong>12 questions • 15s each • 10–100 pts</div>
+        <div class="control"><strong>Submerge</strong>Hold S / Down</div>
+        <div class="control"><strong>Pause / Mute</strong>P pauses • M toggles audio</div>
+        <div class="control"><strong>Win</strong>12 jets → ship → escape</div>
+      </div>
+      <div class="scoreboard menuLeaderboard"><div class="scoreboardTitle">Top Scores</div><div id="menuScoreList"></div></div>
+      <div class="howToPlayStrip" aria-label="How to play"><span>Move</span><span>Blast</span><span>Shield</span><span>Atomic Roar</span></div>
+      <div class="actions"><button id="startBtn">Ready Player One</button></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="triviaModal hidden" id="triviaModal" role="dialog" aria-modal="true" aria-labelledby="triviaTitle">
+  <div class="triviaPanel">
+    <div class="triviaHeader">
+      <div class="eyebrow">Kaiju Trivia</div>
+      <h2 id="triviaTitle">Kaijū Trivia Challenge</h2>
+      <p>Answer before the 15-second timer expires. Correct answers are worth 10–100 points based on remaining time. Wrong answers score zero.</p>
+    </div>
+
+    <div class="triviaStats" aria-label="Trivia score and progress">
+      <div class="triviaStat"><span>Score</span><strong id="triviaScore">0000</strong></div>
+      <div class="triviaStat"><span>Question</span><strong id="triviaCounter">1/12</strong></div>
+      <div class="triviaStat"><span>Remaining</span><strong id="triviaRemaining">11</strong></div>
+      <div class="triviaStat" id="triviaPotentialStat"><span>Possible</span><strong id="triviaPotential">0000</strong></div>
+    </div>
+
+    <div class="triviaTimer">
+      <div class="triviaTimerMeta">
+        <span id="triviaType">Multiple Choice</span>
+        <strong id="triviaTimerText">15.0s</strong>
+      </div>
+      <div class="triviaTimerTrack" aria-hidden="true"><div class="triviaTimerFill" id="triviaTimerFill"></div></div>
+    </div>
+
+    <h3 class="triviaQuestion" id="triviaQuestion">Question loading…</h3>
+    <div class="triviaAnswers" id="triviaAnswers"></div>
+
+    <div class="triviaInputWrap hidden" id="triviaInputWrap">
+      <input id="triviaInput" type="text" autocomplete="off" spellcheck="false" placeholder="Type your answer">
+      <button type="button" id="triviaSubmitBtn">Submit</button>
+    </div>
+
+    <div class="triviaFeedback" id="triviaFeedback" aria-live="polite"></div>
+
+    <div class="triviaActions">
+      <button type="button" id="triviaNextBtn" class="hidden">Next Question</button>
+      <button type="button" id="triviaStartOverBtn" class="secondary hidden">Play Trivia Again</button>
+      <button type="button" id="triviaExitBtn" class="secondary">Back To Title</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay hidden" id="end">
+  <div class="panel">
+    <div class="hero"><div><div class="eyebrow">Game Over</div><h1 id="endTitle">Kaijū Down</h1></div></div>
+    <div class="body">
+      <p id="endText" class="hidden"></p>
+      <div id="rankTitle" class="rankTitle">CITY WRECKER</div>
+      <div id="finalScoreBig" class="finalScoreBig">Final Score 0</div>
+      <div id="scoreBreakdown" class="scoreCeremony"></div>
+      <div id="newHighNotice" class="newHighNotice hidden"><strong>NEW HIGH SCORE</strong><span>ENTER YOUR INITIALS</span></div>
+      <div class="scoreForm" id="scoreForm"><input id="initials" minlength="3" maxlength="3" placeholder="TOM"><button id="saveBtn">Save</button></div>
+      <div class="scoreboard"><div class="scoreboardTitle">Top Score Table</div><div id="scoreList"></div></div>
+<div class="actions"><button id="restartBtn">Play Again</button><button class="secondary" id="otherKaijūBtn">Try Other Kaijū</button></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="js/kaiju-run.js"></script>
+</body>
+</html>

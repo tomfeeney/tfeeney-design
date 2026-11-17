@@ -1,0 +1,123 @@
+body.is-locked {
+      overflow: hidden;
+    }
+
+    .page-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #000;
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.28)),
+    var(--bg-audi);
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+    .page-gate[hidden] {
+      display: none !important;
+    }
+
+    .page-gate-card {
+      width: min(100%, 460px);
+      padding: 32px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.64);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      color: #fff;
+      text-align: center;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .page-gate-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+
+    .page-gate-card h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      line-height: 1.1;
+    }
+
+    .page-gate-card p {
+      margin: 0 0 20px;
+      color: rgba(255, 255, 255, 0.76);
+      line-height: 1.65;
+    }
+
+    .page-gate-form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .page-gate-form .case-study-btn {
+  display: block;
+  width: 100%;
+}
+
+    .page-gate-input {
+      width: 100%;
+      min-height: 52px;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      outline: none;
+    }
+
+    .page-gate-input::placeholder {
+      color: rgba(255, 255, 255, 0.42);
+    }
+
+    .page-gate-button {
+      min-height: 52px;
+      border: 0;
+      border-radius: 999px;
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .page-gate-button:hover {
+      transform: translateY(-1px);
+    }
+
+    .page-gate-error {
+      min-height: 20px;
+      margin-top: 2px;
+      color: #ff8c8c;
+      font-size: 0.95rem;
+    }
+
+    #protectedPage[hidden] {
+      display: none !important;
+    }
+
+    .hero-side-img {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+    }
+
+    .gc-lesson-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+

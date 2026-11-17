@@ -1,0 +1,15 @@
+export const KEY_MAP=Object.freeze({a:'left',arrowleft:'left',d:'right',arrowright:'right',w:'up',arrowup:'up',s:'down',arrowdown:'down',' ':'fire',r:'roar'});
+export function mapGamepad(pad){if(!pad)return {x:0,y:0,fire:false,roar:false,pause:false,confirm:false};const b=i=>!!pad.buttons[i]?.pressed,axis=i=>Math.abs(pad.axes[i]||0)>.2?pad.axes[i]:0;return {x:b(14)?-1:b(15)?1:axis(0),y:b(12)?-1:b(13)?1:axis(1),fire:b(0)||b(7),roar:b(1)||b(5),pause:b(9),confirm:b(0)};}
+export class Input {
+  constructor({pause,mute,confirm,blur,navigate},root=document,win=window){this.keyboard=new Set();this.touch=new Map();this.edges={roar:false};this.previousPad={};this.actions={pause,mute,confirm,blur,navigate};this.root=root;this.win=win;
+    win.addEventListener('keydown',e=>{if(e.target.matches?.('input,select,textarea'))return;const key=e.key.toLowerCase();if(e.target.matches?.('button')&&(key===' '||key==='enter'))return;if(KEY_MAP[key]){e.preventDefault();if(!this.keyboard.has(KEY_MAP[key])&&key==='r')this.edges.roar=true;this.keyboard.add(KEY_MAP[key]);}if(e.repeat)return;if(key==='p'||key==='escape'){e.preventDefault();pause();}if(key==='m')mute();if(key==='enter')confirm();});
+    win.addEventListener('keyup',e=>{const action=KEY_MAP[e.key.toLowerCase()];if(action)this.keyboard.delete(action);});win.addEventListener('blur',()=>{this.clear();blur();});root.addEventListener('visibilitychange',()=>{if(root.hidden){this.clear();blur();}});
+    root.querySelectorAll('[data-touch-key],[data-touch-action]').forEach(button=>{button.addEventListener('pointerdown',e=>{e.preventDefault();button.setPointerCapture?.(e.pointerId);const key=button.dataset.touchKey==='space'?' ':button.dataset.touchKey;const action=KEY_MAP[key]||button.dataset.touchAction;if(action==='pause')pause();else if(action==='mute')mute();else{this.touch.set(e.pointerId,action);if(action==='roar')this.edges.roar=true;}button.classList.add('pressed');});const release=e=>{this.touch.delete(e.pointerId);button.classList.remove('pressed');};for(const name of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(name,release);});
+  }
+  clear(){this.keyboard.clear();this.touch.clear();this.edges.roar=false;this.root.querySelectorAll('.pressed').forEach(b=>b.classList.remove('pressed'));}
+  read(){const held=action=>this.keyboard.has(action)||[...this.touch.values()].includes(action),pads=this.win.navigator?.getGamepads?.()||[],pad=mapGamepad([...pads].find(Boolean));
+    if(pad.pause&&!this.previousPad.pause)this.actions.pause();if(pad.confirm&&!this.previousPad.confirm)this.actions.confirm();
+    const roar=this.edges.roar||(pad.roar&&!this.previousPad.roar);this.edges.roar=false;if(Math.abs(pad.y)>.5&&Math.abs(this.previousPad.y||0)<=.5)this.actions.navigate?.(pad.y>0?1:-1,'vertical');if(Math.abs(pad.x)>.5&&Math.abs(this.previousPad.x||0)<=.5)this.actions.navigate?.(pad.x>0?1:-1,'horizontal');this.previousPad=pad;
+    return {x:held('left')?-1:held('right')?1:pad.x,y:held('up')?-1:held('down')?1:pad.y,fire:held('fire')||pad.fire,roar};
+  }
+}

@@ -1,0 +1,748 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;min-height:100dvh;overflow:hidden;background:#020814;color:#eef7ff;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overscroll-behavior:none;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+#wrap{position:relative;width:100vw;height:100vh;height:100dvh;overflow:hidden;background:#020814}
+canvas{display:block;width:100%;height:100%;background:#020814;touch-action:none}
+.overlay{position:absolute;inset:0;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 42%,rgba(4,26,52,.18),rgba(1,7,18,.9));z-index:10;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.hidden{display:none!important}
+.panel{width:min(960px,calc(100vw - 32px));border:1px solid rgba(112,200,255,.18);border-radius:28px;background:rgba(4,16,32,.9);box-shadow:0 30px 90px rgba(0,0,0,.74);overflow:hidden;backdrop-filter:blur(12px)}
+.hero{min-height:250px;padding:30px;display:flex;align-items:flex-end;background-image:radial-gradient(circle at 50% 35%,rgba(44,198,255,.16),rgba(0,5,16,.84));background-size:cover;background-position:center}
+.body{padding:24px 28px 28px}.eyebrow{display:inline-flex;padding:6px 12px;border:1px solid rgba(126,212,255,.14);border-radius:999px;background:rgba(64,145,255,.08);color:rgba(214,238,255,.8);font-size:12px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:14px}
+.titlePipe{font-weight:400;opacity:.72;margin:0 .18em;display:inline-block}
+h1{font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.06em;margin:0;text-shadow:0 8px 32px rgba(0,0,0,.7)}
+p{margin:0 0 15px;color:rgba(238,244,255,.74);line-height:1.5;font-size:15px}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}
+.choice{border:1px solid rgba(116,198,255,.16);border-radius:18px;padding:16px;min-height:104px;background:rgba(34,78,128,.09);color:#eef4ff;text-align:left;cursor:pointer;font:inherit}
+.choice.selected{border-color:rgba(44,198,255,.95);background:rgba(44,198,255,.14)}
+#chooseGodzilla{
+  border-color:rgba(0,204,0,.24);
+  background:
+    radial-gradient(circle at 50% 110%,rgba(0,204,0,.22),rgba(0,204,0,0) 58%),
+    linear-gradient(180deg,rgba(0,204,0,.08),rgba(34,78,128,.09));
+  box-shadow:inset 0 0 26px rgba(0,204,0,.22),inset 0 -20px 34px rgba(0,204,0,.10);
+}
+#chooseGodzilla.selected{
+  border-color:rgba(0,204,0,.78);
+  background:
+    radial-gradient(circle at 50% 110%,rgba(0,204,0,.34),rgba(0,204,0,0) 62%),
+    linear-gradient(180deg,rgba(0,204,0,.14),rgba(44,198,255,.10));
+  box-shadow:inset 0 0 34px rgba(0,204,0,.34),inset 0 -24px 42px rgba(0,204,0,.16);
+}
+#chooseMecha{
+  border-color:rgba(255,64,88,.24);
+  background:
+    radial-gradient(circle at 50% 110%,rgba(255,64,88,.22),rgba(255,64,88,0) 58%),
+    linear-gradient(180deg,rgba(255,64,88,.08),rgba(34,78,128,.09));
+  box-shadow:inset 0 0 26px rgba(255,64,88,.22),inset 0 -20px 34px rgba(255,64,88,.10);
+}
+#chooseMecha.selected{
+  border-color:rgba(255,64,88,.78);
+  background:
+    radial-gradient(circle at 50% 110%,rgba(255,64,88,.34),rgba(255,64,88,0) 62%),
+    linear-gradient(180deg,rgba(255,64,88,.14),rgba(44,198,255,.10));
+  box-shadow:inset 0 0 34px rgba(255,64,88,.34),inset 0 -24px 42px rgba(255,64,88,.16);
+}
+.choice strong{display:block;font-size:19px;margin-bottom:6px}.choice span{display:block;font-size:13px;color:rgba(238,244,255,.72);line-height:1.35}
+.mobileTriviaOnlyNote{display:none;margin:12px 0 10px;padding:12px 14px;border:1px solid rgba(0,204,0,.28);border-radius:14px;background:linear-gradient(180deg,rgba(0,204,0,.14),rgba(44,198,255,.08));color:rgba(238,244,255,.78);box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.mobileTriviaOnlyNote strong{display:block;margin-bottom:4px;color:#8dff8d;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.mobileTriviaOnlyNote span{display:block;font-size:12px;line-height:1.35}
+.menuIntroMobile{display:none}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px}
+.control{border:1px solid rgba(110,194,255,.11);border-radius:14px;padding:10px 12px;background:rgba(33,76,118,.09);font-size:13px;color:rgba(224,238,255,.76)}
+.control strong{display:block;color:#eef4ff;margin-bottom:3px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+button{border:0;border-radius:14px;padding:13px 18px;cursor:pointer;font:inherit;font-weight:800;color:#03131a;background:linear-gradient(180deg,#7fe7ff,#2c97dd);box-shadow:0 12px 32px rgba(44,151,221,.28);min-height:44px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button.secondary{color:#eef4ff;border:1px solid rgba(116,198,255,.14);background:rgba(36,72,112,.14);box-shadow:none}
+.banner{position:absolute;left:50%;top:186px;transform:translateX(-50%);z-index:4;min-width:min(760px,calc(100vw - 32px));padding:14px 18px;border:1px solid rgba(116,198,255,.15);border-radius:18px;background:rgba(3,15,31,.78);box-shadow:0 18px 44px rgba(0,0,0,.42);backdrop-filter:blur(10px);text-align:center;pointer-events:none}
+.banner strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:#2cc6ff;margin-bottom:3px}.banner span{display:block;color:rgba(238,244,255,.84);font-size:14px}
+.scoreForm{display:grid;grid-template-columns:1fr auto;gap:10px;margin:16px 0 18px}.scoreForm input{width:100%;border:1px solid rgba(122,206,255,.18);border-radius:14px;padding:12px 14px;background:rgba(25,68,108,.16);color:#eef4ff;font:inherit;text-transform:uppercase;letter-spacing:.14em}
+.scoreboard{margin-top:14px;border:1px solid rgba(116,198,255,.1);border-radius:18px;overflow:hidden;background:rgba(28,64,102,.1)}.scoreboardTitle{padding:11px 14px;border-bottom:1px solid rgba(116,198,255,.1);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.12em}.scoreRow{display:grid;grid-template-columns:38px 1fr auto;gap:10px;padding:9px 14px;color:rgba(226,239,255,.8);font-size:13px;border-top:1px solid rgba(116,198,255,.06)}
+.overlay.endTokyoBg{background-size:cover;background-position:center;background-repeat:no-repeat}
+.overlay.endTokyoBg::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,rgba(0,0,0,.10),rgba(0,0,0,.78) 82%);z-index:-1}
+.overlay.endTokyoBg.godzilla{background-image:none}
+.overlay.endTokyoBg.mecha{background-image:none}
+.finalScoreBig{margin:0 0 8px;text-align:center;font-size:clamp(18px,3vw,38px);line-height:.95;font-weight:800;letter-spacing:-.03em;color:#00cc00;text-shadow:0 4px 14px rgba(0,0,0,.54),0 0 10px rgba(0,204,0,.20)}
+.mecha .finalScoreBig{color:#ff4058;text-shadow:0 4px 14px rgba(0,0,0,.54),0 0 10px rgba(255,64,88,.20)}
+.end .card p,.overlay .card p{font-size:12px}.scoreEntry input{font-size:18px}
+.scoreEntry{display:flex;align-items:center;justify-content:center;gap:10px;margin:12px 0 10px}
+.scoreEntry label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:rgba(238,244,255,.75)}
+.scoreEntry input{
+  width:112px;border:0!important;outline:0!important;background:transparent!important;box-shadow:none!important;border-radius:0!important;
+  color:#00cc00;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:28px!important;font-weight:900;
+  letter-spacing:.22em;text-transform:uppercase;text-align:center;caret-color:#00cc00;padding:0;border-bottom:2px solid rgba(0,204,0,.45)!important;
+}
+.mecha .scoreEntry input{color:#ff4058;caret-color:#ff4058;border-bottom-color:rgba(255,64,88,.45)!important}
+.scoreEntry input::placeholder{color:rgba(238,244,255,.32)}
+.topScores,.damageReference{max-width:380px;margin-left:auto;margin-right:auto}
+.scoreRow{display:flex;justify-content:space-between;gap:12px;font-size:12px;line-height:1.45;color:rgba(238,244,255,.86)}
+
+
+/* --- On-screen arcade effect only --- */
+body.screen-effect canvas{
+  image-rendering:auto;
+  filter:saturate(1.08) contrast(1.04);
+}
+body.screen-effect::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:45;
+  pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg,rgba(255,255,255,.028) 0 1px,rgba(0,0,0,.12) 1px 4px),
+    radial-gradient(ellipse at center,rgba(0,0,0,0) 54%,rgba(0,0,0,.42) 100%);
+  opacity:.62;
+}
+body.screen-effect::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:44;
+  pointer-events:none;
+  box-shadow:
+    inset 0 0 32px rgba(0,0,0,.45),
+    inset 0 0 90px rgba(0,0,0,.22);
+}
+
+
+/* --- Arcade front-end additions --- */
+.attractLine{
+  margin:0 0 18px;
+  padding:9px 14px;
+  border:1px solid rgba(0,204,0,.24);
+  border-radius:999px;
+  background:rgba(0,204,0,.08);
+  color:#00cc00;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  text-align:center;
+  text-shadow:0 0 10px rgba(0,204,0,.28);
+}
+.menuLeaderboard{max-width:440px;margin:18px auto 0}
+.howToPlayStrip{
+  margin:14px auto 0;
+  max-width:720px;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:8px;
+  align-items:center;
+}
+.howToPlayStrip span{
+  display:block;
+  padding:8px 8px;
+  border:1px solid rgba(126,212,255,.12);
+  border-radius:999px;
+  background:rgba(255,255,255,.045);
+  color:rgba(238,244,255,.82);
+  font-size:10px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  text-align:center;
+}
+.rankTitle{
+  margin:0 auto 8px;
+  text-align:center;
+  color:#ffd166;
+  font-weight:1000;
+  font-size:clamp(18px,3vw,34px);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  text-shadow:0 0 18px rgba(255,209,102,.30),0 4px 18px rgba(0,0,0,.62);
+}
+.newHighNotice{
+  margin:12px auto 8px;
+  text-align:center;
+  color:#00cc00;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  text-shadow:0 0 14px rgba(0,204,0,.32);
+}
+.mecha .newHighNotice{color:#ff4058;text-shadow:0 0 14px rgba(255,64,88,.32)}
+.newHighNotice strong{display:block;font-size:16px}.newHighNotice span{display:block;margin-top:3px;font-size:11px;color:rgba(238,244,255,.72)}
+.scoreCeremony{
+  max-width:420px;
+  margin:12px auto 14px;
+  border:1px solid rgba(116,198,255,.1);
+  border-radius:18px;
+  overflow:hidden;
+  background:rgba(10,22,38,.38);
+}
+.scoreBreakRow{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:9px 14px;
+  border-top:1px solid rgba(116,198,255,.06);
+  color:rgba(238,244,255,.82);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.scoreBreakRow:first-child{border-top:0}.scoreBreakRow.final{color:#00cc00;font-size:14px}.mecha .scoreBreakRow.final{color:#ff4058}
+.scoreRow strong{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;letter-spacing:.06em}
+@media (max-width:640px){.howToPlayStrip{grid-template-columns:repeat(2,minmax(0,1fr))}.howToPlayStrip span:last-child{grid-column:1/-1}.menuLeaderboard{max-width:none}}
+
+
+/* --- Asset loading screen --- */
+.loadingScreen{
+  position:absolute;
+  inset:0;
+  z-index:30;
+  display:grid;
+  place-items:center;
+  padding:24px;
+  background:
+    radial-gradient(circle at 50% 38%,rgba(44,198,255,.16),rgba(2,8,20,.96) 62%,rgba(0,0,0,.98)),
+    linear-gradient(180deg,rgba(0,0,0,.24),rgba(0,0,0,.88));
+  color:#eef7ff;
+  text-align:center;
+  pointer-events:auto;
+}
+.loadingScreen.hidden{display:none!important}
+.loadingCard{
+  width:min(520px,calc(100vw - 48px));
+  padding:28px;
+  border:1px solid rgba(126,212,255,.18);
+  border-radius:24px;
+  background:rgba(4,16,32,.84);
+  box-shadow:0 28px 90px rgba(0,0,0,.72);
+  backdrop-filter:blur(12px);
+}
+.loadingEyebrow{
+  display:inline-flex;
+  padding:6px 12px;
+  border:1px solid rgba(126,212,255,.18);
+  border-radius:999px;
+  background:rgba(44,198,255,.08);
+  color:#2cc6ff;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.loadingTitle{
+  margin:0 0 8px;
+  font-size:clamp(34px,6vw,58px);
+  line-height:.92;
+  letter-spacing:-.06em;
+  text-shadow:0 8px 32px rgba(0,0,0,.7);
+}
+.loadingCopy{
+  margin:0 auto 20px;
+  max-width:360px;
+  color:rgba(238,244,255,.72);
+  font-size:14px;
+  line-height:1.45;
+}
+.loadingTrack{
+  width:100%;
+  height:12px;
+  border-radius:999px;
+  overflow:hidden;
+  background:rgba(0,0,0,.58);
+  border:1px solid rgba(255,255,255,.16);
+}
+.loadingFill{
+  width:0%;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#0050FF,#2cc6ff);
+  box-shadow:0 0 18px rgba(0,80,255,.54);
+  transition:width .18s ease;
+}
+.loadingStatus{
+  margin-top:12px;
+  color:rgba(238,244,255,.72);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+}
+.loadingStatus.error{color:#ff4058}
+
+
+/* --- In-game controls HUD --- */
+.gameControlsHud{
+  position:fixed;
+  left:max(18px,env(safe-area-inset-left));
+  right:max(18px,env(safe-area-inset-right));
+  bottom:max(18px,env(safe-area-inset-bottom));
+  z-index:5;
+  width:auto;
+  padding:11px 18px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border:1px solid rgba(126,212,255,.16);
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(3,15,31,.74),rgba(3,15,31,.52));
+  box-shadow:0 18px 44px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter:blur(10px);
+  pointer-events:none;
+}
+.gameControlsHudTitle{
+  flex:0 0 auto;
+  margin-bottom:0;
+  color:#2cc6ff;
+  font-size:11px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.gameControlsHudGrid{
+  display:flex;
+  flex:1 1 auto;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  align-items:center;
+  gap:8px 18px;
+  color:rgba(238,244,255,.68);
+  font-size:11px;
+  font-weight:700;
+  line-height:1.2;
+}
+.gameControlsHudGrid span{white-space:nowrap}
+.gameControlsHudGrid strong{
+  color:rgba(238,244,255,.94);
+  font-weight:900;
+}
+.mecha .gameControlsHudTitle{color:#ff4058}
+
+/* --- Mobile + tablet playability --- */
+.touchControls{
+  position:fixed;
+  left:max(14px,env(safe-area-inset-left));
+  right:auto;
+  bottom:max(12px,env(safe-area-inset-bottom));
+  z-index:8;
+  display:none;
+  width:auto;
+  max-width:calc(100vw - 28px);
+  grid-template-columns:auto auto;
+  gap:clamp(8px,2.2vw,16px);
+  align-items:end;
+  justify-content:start;
+  padding:0;
+  pointer-events:none;
+}
+.touchControls.visible{display:grid}
+.touchMovePad,
+.touchActionPad{pointer-events:auto}
+.touchMovePad{
+  display:grid;
+  grid-template-areas:
+    ". up ."
+    "left down right";
+  grid-template-columns:repeat(3,minmax(48px,64px));
+  grid-template-rows:repeat(2,minmax(48px,58px));
+  gap:8px;
+  justify-content:start;
+}
+.touchActionPad{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(64px,88px));
+  gap:8px;
+  justify-content:start;
+}
+.touchBtn{
+  min-height:48px;
+  padding:10px 12px;
+  border:1px solid rgba(126,212,255,.20);
+  border-radius:18px;
+  background:rgba(5,18,34,.74);
+  color:#eef7ff;
+  box-shadow:0 12px 30px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.08);
+  font-size:14px;
+  font-weight:1000;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  backdrop-filter:blur(10px);
+}
+.touchBtn.pressed,
+.touchBtn:active{
+  transform:translateY(1px) scale(.98);
+  background:rgba(44,198,255,.24);
+  border-color:rgba(44,198,255,.72);
+}
+.touchUp{grid-area:up}
+.touchLeft{grid-area:left}
+.touchDown{grid-area:down}
+.touchRight{grid-area:right}
+.touchBlast{
+  grid-column:1/-1;
+  min-height:64px;
+  color:#03131a;
+  background:linear-gradient(180deg,#7fe7ff,#2c97dd);
+}
+.touchRoar{
+  color:#03131a;
+  background:linear-gradient(180deg,#8dff8d,#00cc00);
+}
+.touchMini{font-size:11px;letter-spacing:.10em}
+
+
+@media (pointer:coarse){
+  .gameControlsHud{display:none!important}
+}
+
+@media (hover:hover) and (pointer:fine) and (min-width:761px) and (min-height:721px){
+  .touchControls.visible{display:none}
+}
+
+@media (max-width:760px), (max-height:720px){
+
+  .gameControlsHud{display:none!important}
+  .overlay{place-items:start center;padding:12px}
+  .panel{
+    width:min(100%,640px);
+    max-height:calc(100dvh - 24px);
+    overflow-y:auto;
+    border-radius:20px;
+  }
+  .hero{
+    min-height:132px;
+    padding:18px;
+    background-position:center top;
+  }
+  .body{padding:16px 16px max(16px,env(safe-area-inset-bottom))}
+  h1{font-size:clamp(32px,12vw,54px);line-height:.92}
+  p{font-size:13px;margin-bottom:10px}
+  .menuIntroDesktop{display:none}
+  .menuIntroMobile{display:inline}
+  .eyebrow{font-size:10px;margin-bottom:10px}
+  .attractLine{margin-bottom:12px;padding:8px 12px;font-size:10px}
+  .choices{gap:10px;margin:12px 0;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .choice{min-height:78px;padding:12px;border-radius:14px}
+  .choice strong{font-size:16px}
+  .choice span{font-size:12px}
+  #chooseGodzilla,
+  #chooseMecha{display:none}
+  .choices{grid-template-columns:1fr}
+  .choiceTrivia{min-height:96px;padding:16px;border-color:rgba(0,204,0,.38);background:linear-gradient(180deg,rgba(0,204,0,.16),rgba(44,198,255,.10))}
+  .choiceTrivia strong{font-size:18px}
+  .mobileTriviaOnlyNote{display:block}
+  .control:not(.controlTrivia){display:none}
+  .controls{
+    grid-template-columns:1fr;
+    gap:8px;
+    margin-top:10px;
+  }
+  .control{font-size:11px;padding:8px 9px;border-radius:12px}
+  .menuLeaderboard,
+  .howToPlayStrip{display:none}
+  .actions{
+    position:sticky;
+    bottom:0;
+    z-index:4;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    padding:12px 0 0;
+    margin-top:12px;
+    background:linear-gradient(180deg,rgba(4,16,32,0),rgba(4,16,32,.96) 32%,rgba(4,16,32,.98));
+  }
+  .actions button{width:100%;min-height:52px}
+  #startBtn{grid-column:1/-1;font-size:16px}
+  .banner{
+    top:128px;
+    min-width:calc(100vw - 24px);
+    padding:11px 12px;
+    border-radius:14px;
+  }
+  .banner strong{font-size:11px}
+  .banner span{font-size:12px}
+  .scoreForm{grid-template-columns:1fr;gap:8px}
+}
+
+@media (max-width:520px){
+  .controls{display:none}
+  .touchControls{
+    left:max(10px,env(safe-area-inset-left));
+    right:auto;
+    bottom:max(10px,env(safe-area-inset-bottom));
+    grid-template-columns:auto;
+    gap:8px;
+    max-width:calc(100vw - 20px);
+  }
+  .touchMovePad{
+    grid-template-columns:repeat(3,minmax(44px,58px));
+    grid-template-rows:repeat(2,50px);
+    gap:7px;
+  }
+  .touchActionPad{
+    grid-template-columns:repeat(2,minmax(64px,88px));
+    gap:7px;
+    justify-content:start;
+  }
+  .touchBtn{border-radius:16px;font-size:12px;padding:8px 9px}
+  .touchBlast{min-height:58px}
+}
+
+@media (max-height:640px){
+  .hero{display:none}
+  .panel{max-height:calc(100dvh - 16px)}
+  .body{padding:14px}
+  .controls,.menuLeaderboard,.howToPlayStrip{display:none}
+  .choices{margin:10px 0}
+}
+
+
+/* Kaiju Trivia modal */
+.choiceTrivia{
+  background:
+    linear-gradient(135deg,rgba(0,204,0,.10),rgba(255,64,88,.10)),
+    rgba(34,78,128,.09);
+}
+.choiceTrivia.selected{
+  border-color:rgba(255,209,102,.92);
+  background:
+    linear-gradient(135deg,rgba(0,204,0,.18),rgba(255,64,88,.18)),
+    rgba(255,209,102,.08);
+}
+.triviaModal{
+  position:absolute;
+  inset:0;
+  z-index:30;
+  display:grid;
+  place-items:center;
+  padding:24px;
+  background:
+    radial-gradient(circle at 50% 36%,rgba(0,204,0,.12),rgba(255,64,88,.10) 38%,rgba(1,7,18,.90) 76%),
+    rgba(1,7,18,.92);
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.triviaPanel{
+  position:relative;
+  width:min(1080px,calc(100vw - 32px));
+  border:1px solid rgba(126,212,255,.18);
+  border-radius:28px;
+  background:
+    linear-gradient(180deg,rgba(4,18,36,.95),rgba(2,9,22,.96)),
+    rgba(4,16,32,.94);
+  box-shadow:0 34px 110px rgba(0,0,0,.78),inset 0 1px 0 rgba(255,255,255,.06);
+  overflow:hidden;
+  backdrop-filter:blur(14px);
+}
+.triviaPanel::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(0,204,0,.08),transparent 30%,transparent 70%,rgba(255,64,88,.09)),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,rgba(0,0,0,.06) 1px 4px);
+  opacity:.64;
+}
+
+.triviaHeader,
+.triviaStats,
+.triviaTimer,
+.triviaQuestion,
+.triviaAnswers,
+.triviaInputWrap,
+.triviaFeedback,
+.triviaActions{
+  position:relative;
+  z-index:1;
+}
+.triviaHeader{
+  padding:30px 44px 20px;
+  border-bottom:1px solid rgba(126,212,255,.10);
+}
+.triviaHeader h2{
+  margin:0 0 10px;
+  font-size:clamp(34px,5vw,68px);
+  line-height:.9;
+  letter-spacing:-.055em;
+  text-shadow:0 8px 28px rgba(0,0,0,.72);
+}
+.triviaHeader p{
+  max-width:760px;
+  margin:0;
+}
+.triviaStats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  padding:20px 44px 12px;
+}
+.triviaStat{
+  border:1px solid rgba(126,212,255,.12);
+  border-radius:16px;
+  padding:11px 12px;
+  background:rgba(32,76,118,.11);
+}
+.triviaStat span{
+  display:block;
+  margin-bottom:3px;
+  color:rgba(238,244,255,.56);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+}
+.triviaStat strong{
+  display:block;
+  color:#eef4ff;
+  font-size:clamp(16px,2.2vw,24px);
+  line-height:1;
+  font-weight:900;
+}
+.triviaTimer{
+  padding:10px 44px 8px;
+}
+.triviaTimerMeta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:8px;
+  color:rgba(238,244,255,.74);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.triviaTimerMeta strong{
+  color:#ffd166;
+  font-size:18px;
+  letter-spacing:0;
+}
+.triviaTimerTrack{
+  width:100%;
+  height:12px;
+  border-radius:999px;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.12);
+  overflow:hidden;
+}
+.triviaTimerFill{
+  width:100%;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#00cc00,#66ff66);
+  box-shadow:0 0 18px rgba(0,204,0,.28);
+  transition:width .12s linear;
+}
+.triviaQuestion{
+  margin:18px 44px 24px;
+  padding:22px 24px;
+  color:#eef4ff;
+  font-size:clamp(18px,2.35vw,28px);
+  line-height:1.24;
+  letter-spacing:-.025em;
+  border:1px solid rgba(126,212,255,.12);
+  border-radius:22px;
+  background:rgba(0,0,0,.20);
+}
+.triviaAnswers{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  padding:0 44px 22px;
+}
+.triviaAnswer{
+  min-height:74px;
+  padding:14px 16px;
+  border:1px solid rgba(126,212,255,.14);
+  border-radius:18px;
+  background:rgba(34,78,128,.13);
+  box-shadow:none;
+  color:#eef4ff;
+  text-align:left;
+  line-height:1.25;
+}
+.triviaAnswer strong{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:28px;
+  height:28px;
+  margin-right:8px;
+  border-radius:999px;
+  color:#03131a;
+  background:#7fe7ff;
+}
+.triviaAnswer.correct{
+  border-color:rgba(0,204,0,.9);
+  background:rgba(0,204,0,.16);
+}
+.triviaAnswer.wrong{
+  border-color:rgba(255,64,88,.9);
+  background:rgba(255,64,88,.14);
+}
+.triviaAnswer:disabled{
+  cursor:default;
+  opacity:.88;
+}
+.triviaInputWrap{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  padding:0 44px 22px;
+}
+.triviaInputWrap input{
+  width:100%;
+  min-height:54px;
+  border:1px solid rgba(122,206,255,.18);
+  border-radius:16px;
+  padding:12px 14px;
+  background:rgba(25,68,108,.18);
+  color:#eef4ff;
+  font:inherit;
+}
+.triviaFeedback{
+  min-height:76px;
+  margin:0 44px 22px;
+  padding:13px 15px;
+  border:1px solid rgba(126,212,255,.10);
+  border-radius:18px;
+  background:rgba(0,0,0,.24);
+  color:rgba(238,244,255,.78);
+  line-height:1.4;
+}
+.triviaFeedback.good{border-color:rgba(0,204,0,.45);color:#9dff9d}
+.triviaFeedback.bad{border-color:rgba(255,64,88,.45);color:#ffb3c0}
+.triviaFeedback.done{border-color:rgba(255,209,102,.45);color:#ffd166;text-align:center;font-size:18px}
+.triviaActions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  padding:0 44px 34px;
+}
+.triviaActions button{min-width:160px}
+@media (min-width:761px){
+  .choices{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:760px), (max-height:720px){
+
+  .gameControlsHud{display:none!important}
+  .triviaModal{padding:12px;place-items:start center}
+  .triviaPanel{
+    width:min(100%,640px);
+    max-height:calc(100dvh - 24px);
+    overflow-y:auto;
+    border-radius:20px;
+  }
+  .triviaHeader{padding:18px 16px 14px}
+  .triviaStats{grid-template-columns:repeat(2,minmax(0,1fr));padding:14px 16px 8px}
+  .triviaTimer{padding:8px 16px 6px}
+  .triviaQuestion{margin:12px 16px 16px;padding:16px 14px;font-size:clamp(17px,4.4vw,22px);line-height:1.28;border-radius:18px}
+  .triviaAnswers{grid-template-columns:1fr;padding:0 16px 16px;gap:11px}
+  .triviaAnswer{min-height:58px;padding:12px}
+  .triviaInputWrap{grid-template-columns:1fr;padding:0 16px 14px}
+  .triviaFeedback{margin:0 16px 14px;min-height:72px}
+  .triviaActions{display:grid;grid-template-columns:1fr;padding:0 16px 16px}
+  .triviaActions button{width:100%}
+}
+/* Arcade edition: retain the original visual language on every screen. */
+#missionModal{z-index:30}#missionModal .hero{min-height:220px}#missionModal .briefObjective{color:#7fe7ff;font-weight:700;border:1px solid rgba(126,212,255,.18);border-radius:14px;padding:14px;background:rgba(44,198,255,.08)}.refitChoices{grid-template-columns:repeat(3,minmax(0,1fr))}.refitChoices .choice:hover,.refitChoices .choice:focus-visible{border-color:#00cc00;background:rgba(0,204,0,.12)}button:focus-visible,input:focus-visible{outline:3px solid #7fe7ff;outline-offset:3px}.mobileTriviaOnlyNote{display:none!important}.menuIntroDesktop{display:inline!important}.menuIntroMobile{display:none!important}.control:not(.controlTrivia){display:block!important}#chooseGodzilla,#chooseMecha{display:block!important}.menuLeaderboard,.howToPlayStrip{display:block}.howToPlayStrip{display:grid}.overlay{align-content:safe center}#endText{display:block!important}@media(max-width:760px),(max-height:720px){.choices{grid-template-columns:repeat(2,minmax(0,1fr))}.choiceTrivia{grid-column:1/-1}.controls{grid-template-columns:repeat(2,minmax(0,1fr))}.refitChoices{grid-template-columns:1fr}.refitChoices .choice{min-height:76px}#missionModal .hero{min-height:140px}.menuLeaderboard{display:block}.howToPlayStrip{display:none}}@media(prefers-reduced-motion:reduce){body.screen-effect::before{opacity:.28}}
+/* New controls use the existing panel colors, borders, and typography. */
+.arcadeOptions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}.arcadeOptions label{font-size:12px;font-weight:800;color:#eef4ff}.arcadeOptions select{display:block;width:100%;margin-top:7px;padding:11px 12px;border:1px solid rgba(126,212,255,.2);border-radius:14px;background:#0b2137;color:#eef7ff;font:inherit;min-height:44px}.arcadeOptions input[type=range]{display:block;width:100%;margin-top:15px;accent-color:#2cc6ff}.arcadeSettings{border:1px solid rgba(126,212,255,.14);border-radius:14px;padding:12px 14px;margin-top:15px;color:#eef7ff;font-size:12px}.arcadeSettings summary{cursor:pointer;font-weight:800;min-height:24px}.arcadeSettings p{font-size:12px;margin-top:12px}.checkSetting{display:inline-flex;gap:8px;align-items:center;margin-right:14px;min-height:44px}.checkSetting input{width:20px;height:20px;accent-color:#2cc6ff}#modeDescription{font-size:12px;color:rgba(238,244,255,.8)}#sessionControls{position:absolute;bottom:82px;right:20px;z-index:6;display:flex;gap:8px}#sessionControls button{padding:9px 12px;font-size:11px;min-height:44px}#pauseModal{z-index:40}#end{z-index:35}.srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}#game{object-fit:contain}#performanceReadout{color:rgba(238,244,255,.7)}.overlay{align-content:initial}.overlay .panel{max-height:calc(100dvh - 24px);overflow-y:auto}.overlay{place-items:center;overflow-y:auto}#menu .choices{grid-template-columns:repeat(3,minmax(0,1fr))}.refitChoices .choice{box-shadow:none}#pauseTitle{font-size:38px;margin-top:0}#menu .hero{background-image:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,5,16,.78)),url('../assets/background.png')}@media(max-width:760px),(max-height:720px){#menu .choices{grid-template-columns:repeat(2,minmax(0,1fr))}#chooseTrivia{grid-column:1/-1}.arcadeOptions{grid-template-columns:1fr 1fr}.overlay{place-items:start center}#sessionControls{bottom:160px;right:10px}}@media(hover:hover) and (pointer:fine) and (min-width:761px) and (min-height:721px){#sessionControls{bottom:84px}}@media(pointer:coarse){#sessionControls{display:none}#gameControlsHud{display:none!important}}

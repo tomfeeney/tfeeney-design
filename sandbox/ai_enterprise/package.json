@@ -1,0 +1,13 @@
+{
+  "name": "ai-ncc-1701-alpha",
+  "version": "1.8.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "devDependencies": {
+    "vercel": "latest"
+  }
+}

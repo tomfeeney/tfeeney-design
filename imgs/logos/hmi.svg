@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="167px" height="142px" viewBox="0 0 167 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <rect id="Rectangle" fill="#000000" x="0" y="0" width="87" height="142" rx="12"></rect>
+            <rect id="Rectangle" fill="#000000" x="67" y="116" width="100" height="26" rx="12"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="10" y="12" width="67" height="50" rx="8"></rect>
+            <path d="M52.1466347,42.1970984 C52.3390274,42.0739299 52.5161512,41.9415733 52.6764366,41.8012016 L66.2343206,29.8795999 C67.3314254,28.9551332 67.553005,27.7276112 66.8136093,26.6704162 C66.0742136,25.6132212 64.4893724,24.8915388 62.6702649,24.783679 C60.8511574,24.6758192 59.082017,25.1986351 58.0450963,26.1505075 L47.872899,35.0901125 C47.4923883,35.4281162 46.7650126,35.5240598 46.2027615,35.3104099 L38.5584763,32.4146164 C36.2994032,31.5631303 33.3856024,31.9521603 31.8627889,33.3085769 L20.1768718,43.7264094 C18.5633834,45.1652528 19.0987786,47.1593043 21.3727105,48.1802483 C23.6466424,49.2011923 26.7980192,48.8624179 28.4115077,47.4235746 L36.7016466,40.0100879 C37.0857987,39.6711887 37.8165327,39.575381 38.3818757,39.7897905 L45.985795,42.663235 C47.9655656,43.4195817 50.504509,43.2274821 52.1466347,42.1970984 Z" id="Path" fill="#000000"></path>
+            <circle id="Oval-2" fill-opacity="0.86" fill="#919191" cx="24" cy="82" r="5"></circle>
+            <circle id="Oval-2" fill-opacity="0.86" fill="#919191" cx="43" cy="82" r="5"></circle>
+            <circle id="Oval-2" fill-opacity="0.86" fill="#919191" cx="62" cy="82" r="5"></circle>
+            <circle id="Oval-2" fill-opacity="0.86" fill="#000000" cx="137" cy="27" r="10"></circle>
+            <polyline id="Path" stroke="#000000" stroke-width="8" points="84 27 137 27 137 57"></polyline>
+            <polyline id="Path" stroke="#000000" stroke-width="8" points="137 57 122 67 132 77"></polyline>
+            <polyline id="Path" stroke="#000000" stroke-width="8" transform="translate(144.5, 67) scale(-1, 1) translate(-144.5, -67)" points="152 57 137 67 147 77"></polyline>
+            <rect id="Rectangle-2" fill="#000000" x="97" y="94" width="20" height="12"></rect>
+            <rect id="Rectangle-2" fill="#000000" x="127" y="94" width="20" height="12"></rect>
+        </g>
+    </g>
+</svg>

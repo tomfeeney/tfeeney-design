@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180px" height="143px" viewBox="0 0 180 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pie-line-graph-desktop</title>
+    <defs>
+        <rect id="path-1" x="135" y="45" width="15" height="45" rx="4"></rect>
+        <filter x="-93.3%" y="-22.2%" width="286.7%" height="162.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pie-line-graph-desktop">
+            <rect id="Rectangle" fill-opacity="0.86" fill="#FFFFFF" x="12" y="12" width="155" height="104"></rect>
+            <path d="M168.75,0 L11.25,0 C5.03679656,0 0,5.03679656 0,11.25 L0,131.25 C0,137.463203 5.03679656,142.5 11.25,142.5 L168.75,142.5 C174.963203,142.5 180,137.463203 180,131.25 L180,11.25 C180,5.03679656 174.963203,0 168.75,0 Z M165,108.75 C165,110.821068 163.321068,112.5 161.25,112.5 L18.75,112.5 C16.6789322,112.5 15,110.821068 15,108.75 L15,18.75 C15,16.6789322 16.6789322,15 18.75,15 L161.25,15 C163.321068,15 165,16.6789322 165,18.75 L165,108.75 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+            <path d="M75.15,78.33 C75.4359733,78.0406651 75.699251,77.7297467 75.9375,77.4 L96.09,49.395 C97.7207415,47.223338 98.0500984,44.3397696 96.9510573,41.8563159 C95.8520163,39.3728622 93.4963011,37.6775602 90.7923715,37.4241871 C88.0884418,37.170814 85.4587836,38.3989592 83.9175,40.635 L68.7975,61.635 C68.2319072,62.4290036 67.1507326,62.6543844 66.315,62.1525 L54.9525,55.35 C51.5946035,53.3497765 47.2635168,54.2636456 45,57.45 L27.63,81.9225 C25.2317035,85.3024827 26.0275174,89.9867034 29.4075001,92.3849999 C32.7874827,94.7832964 37.4717034,93.9874826 39.87,90.6075 L52.1925,73.1925 C52.7635053,72.3963927 53.8496717,72.1713312 54.69,72.675 L65.9925,79.425 C68.9352399,81.2017318 72.7091369,80.7504714 75.15,78.33 Z" id="Path" fill="#000000"></path>
+            <rect id="Rectangle" fill="#000000" x="108.75" y="30" width="15" height="60" rx="4"></rect>
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

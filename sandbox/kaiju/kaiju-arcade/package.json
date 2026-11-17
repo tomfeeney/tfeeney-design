@@ -1,0 +1,1 @@
+{"name":"kaiju-run-arcade","private":true,"type":"module","scripts":{"test":"node --test tests/modular.test.mjs","serve":"python3 -m http.server 8087 --bind 127.0.0.1"}}

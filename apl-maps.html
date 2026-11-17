@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#000000" name="theme-color"/><script>
+    document.documentElement.classList.add('js');
+  </script>
+<title>Apple Maps Internal QA Tool | Enterprise UX Case Study</title>
+<meta content="Apple Maps internal tool case study covering survey authoring, metadata integrity, validation, usability testing, and reliable QA workflow design." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://www.tfeeney-design.com/apl-maps.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Apple Maps Internal QA Tool — Product Design Case Study" property="og:title"/>
+<meta content="Enterprise UX for survey authoring, validation, metadata integrity, and reliable internal QA workflows." property="og:description"/>
+<meta content="https://www.tfeeney-design.com/apl-maps.html" property="og:url"/>
+<meta content="https://www.tfeeney-design.com/imgs/apple/maps-thumb.webp" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Apple Maps Internal QA Tool — Tom Feeney" name="twitter:title"/>
+<meta content="Product design case study for a purpose-built Apple Maps QA authoring and validation workflow." name="twitter:description"/>
+<meta content="https://www.tfeeney-design.com/imgs/apple/maps-thumb.webp" name="twitter:image"/>
+<link href="imgs/logos/mark.svg" rel="icon" sizes="32x32"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/><link href="css/styles-motion.css" rel="stylesheet"/>
+<script defer="" src="js/motion.js"></script></head>
+<body data-motion-page="apl-maps">
+<main>
+<section class="cs-parallax-maps-cs position-relative overflow-hidden" data-parallax-section="" id="intro">
+<div class="container intro-txt">
+<div class="row align-items-center g-4 intro-nav">
+<nav aria-label="Primary" class="site-nav">
+<img alt="Tom Feeney logo" class="img-fluid d-block" decoding="async" draggable="false" height="60" loading="lazy" src="imgs/logos/mark.svg" width="60"/>
+<div class="site-nav-links">
+<a class="site-nav-link" href="index.html">HOME</a>
+<a aria-current="page" class="site-nav-link is-active" href="work.html">WORK</a>
+<a class="site-nav-link" href="index.html#sandbox">AI SANDBOX</a>
+<a class="site-nav-link" href="consulting.html">CONSULTING</a>
+</div>
+</nav>
+</div>
+<div class="row align-items-center g-4 intro-me" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="col-lg-8">
+<p class="project-label mb-2">Case Study</p>
+<h3 class="h4">Apple Maps Survey Creation Tool</h3>
+<p class="mb-4">Re-architecting an <strong>internal QA workflow</strong> to reduce <strong>setup errors</strong>, strengthen <strong>metadata integrity</strong>, and improve survey reliability.</p>
+</div>
+<div class="col-lg-4">
+<div class="work-thumb work-thumb-maps overflow-hidden rounded-3"></div>
+</div>
+</div>
+<div class="row intro-mouse">
+<div class="col-12">
+<div class="d-flex justify-content-center">
+<div class="scroll-icon" data-animate="fade" style="--motion-delay: 400ms;">
+<a class="d-inline-block" href="#overview">
+<img alt="" aria-hidden="true" class="img-fluid d-block" decoding="async" draggable="false" height="640" loading="lazy" src="imgs/logos/animation-mouse.webp" width="640"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="gc-overview body-copy" id="overview">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-5">
+<div class="col-12">
+<h2 class="gc-section-title">My Role</h2>
+<p class="gc-lesson-title">Leading end-to-end UX for a purpose-built Maps QA tool.</p>
+</div>
+</div>
+<div class="row g-4 align-items-start">
+<div class="col-lg-3">
+<div class="text-center">
+<img alt="Survey workflow icon" class="rounded-3 gc-overview-icon" decoding="async" draggable="false" height="143" loading="lazy" src="imgs/logos/dashboard.svg" width="180"/>
+<hr class="gc-overview-rule"/>
+<p class="gc-overview-label">Internal QA Tooling</p>
+</div>
+</div>
+<div class="col-lg-9">
+
+<ul class="gc-bullets">
+<li>Led <strong>end-to-end UX</strong> for Apple Maps survey authoring</li>
+<li>Conducted <strong>research</strong>, <strong>workflow analysis</strong>, and <strong>heuristic evaluation</strong></li>
+<li>Defined <strong>information architecture</strong>, <strong>authoring flows</strong>, and <strong>validation patterns</strong></li>
+<li>Created scalable <strong>components</strong> and <strong>interaction patterns</strong></li>
+<li>Partnered with <strong>QA leads</strong>, <strong>PMs</strong>, and <strong>engineers</strong> through delivery</li>
+</ul>
+
+<p class="gc-copy">
+<strong>Credits / Team:</strong> QA Leads, Internal Tools PM, Engineering, Research
+          </p>
+<p class="gc-copy">
+<strong>Tools:</strong> Sketch, InVision, workflow mapping, heuristic audit
+          </p>
+
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section class="gc-lesson-dark body-copy txt-white">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Background</h2>
+<p class="gc-lesson-title">Replacing generic survey tools with a purpose-built QA workflow.</p>
+</div>
+</div>
+<div class="row mb-5">
+<div class="col-2"></div>
+<div class="col-8">
+<img alt="Apple Maps survey workflow showing the journey from dashboard to launch and project status" class="rounded-3 gc-lesson-image" decoding="async" draggable="false" height="880" loading="lazy" src="imgs/apple/maps-01.webp" data-animate="scale-in" style="--motion-delay: 200ms;" width="1600"/>
+</div>
+<div class="col-2"></div>
+</div>
+
+<div class="gc-lesson-copy-wrap">
+    <p class="gc-copy">Apple Maps QA relied on <strong>third-party survey tools</strong> that lacked the <strong>workflow logic</strong>, <strong>metadata support</strong>, and <strong>quality controls</strong> required for internal validation.</p>
+
+<p class="gc-copy">Surveys supported geo review and downstream QA—not just form creation. The workflow needed <strong>logic</strong>, <strong>preview</strong>, <strong>metadata structure</strong>, and <strong>launch control</strong>.</p>
+<p class="gc-copy">The goal was to simplify authoring, move validation earlier, and create <strong>reusable foundations for future internal QA tools</strong>.</p>
+<p class="gc-copy">How might we help Maps QA teams build and launch reliable surveys faster?</p>
+</div>
+</div>
+</section>
+
+
+
+
+<section class="gc-lesson-light body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Problem</h2>
+<p class="gc-lesson-title">The existing workflow created friction at every stage.</p>
+</div>
+</div>
+<div class="row mb-5 align-items-start">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<img alt="Apple Maps survey dashboard, project creation modal, and annotated upload screen" class="rounded-3 gc-lesson-image" decoding="async" draggable="false" height="480" loading="lazy" src="imgs/apple/maps-02.webp"  data-animate="scale-in" style="--motion-delay: 200ms;" width="912"/>
+<p class="gc-caption">Project setup and upload flows exposed gaps in structure, validation, and reliability.</p>
+</div>
+<div class="col-lg-2"></div>
+</div>
+<div class="row mb-5 align-items-start">
+<div class="gc-lesson-copy-wrap">
+<ul class="gc-bullets">
+<li>Generic tools did not support Apple’s QA logic or data requirements</li>
+<li>Manual setup was slow, repetitive, and error-prone</li>
+<li>Limited preview and validation made broken paths easier to publish</li>
+<li>Metadata gaps weakened triage, reporting, and downstream workflows</li>
+<li>No reusable internal patterns supported consistency or scale</li>
+</ul>
+<p class="gc-copy">Teams could create surveys, but the workflow lacked the fit, structure, and controls needed for reliable QA.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section class="gc-lesson body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Discovery</h2>
+<p class="gc-lesson-title">Finding where setup, validation, and metadata decisions failed.</p>
+</div>
+</div>
+<div class="row mb-5">
+<div class="col-3"></div>
+<div class="col-6">
+<img alt="Apple Maps data upload and design survey workflow screens" class="gc-lesson-image" decoding="async" draggable="false" height="1204" loading="lazy" src="imgs/apple/maps-03.webp"  data-animate="scale-in" style="--motion-delay: 100ms;"width="1601"/>
+<p class="gc-caption">
+              Survey Creation Tools
+            </p>
+</div>
+<div class="col-3"></div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">I mapped the workflow with <strong>QA engineers</strong>, Product, and Engineering—from project setup through launch—to identify repetitive work, unclear logic, and late-stage risk.</p>
+<ul class="gc-bullets">
+<li>Interviewed QA engineers about authoring workflows</li>
+<li>Audited exported surveys and setup files</li>
+<li>Identified workarounds that increased setup risk</li>
+<li>Mapped metadata gaps affecting Radar and QA systems</li>
+<li>Reviewed <strong>preview</strong>, <strong>validation</strong>, and launch needs</li>
+</ul>
+<p class="gc-copy">The key insight: quality was being checked <strong>too late</strong>. Structure and validation needed to happen before launch—not <strong>downstream</strong>.</p>
+</div>
+</div>
+</section>
+
+<section class="gc-lesson-light body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Strategy</h2>
+<p class="gc-lesson-title">Designing around Apple Maps QA—not a generic survey builder.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">The strategy created a lightweight internal workflow tailored to how surveys were structured, reviewed, and launched.</p>
+<p class="gc-copy">Priorities included clearer <strong>project setup</strong>, <strong>modular authoring</strong>, earlier validation, and stronger metadata.</p>
+<p class="gc-copy">Reusable patterns ensured future QA tools could build on the same foundation.</p>
+</div>
+</div>
+</section>
+<section class="gc-lesson body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Solution</h2>
+<p class="gc-lesson-title">A structured workflow from project setup through monitoring.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">The experience connected <strong>project creation</strong>, authoring, preview, validation, launch, and monitoring in one QA-specific workflow.</p>
+<p class="gc-copy">A modular builder supported rows, questions, images, and maps while maintaining consistency.</p>
+<p class="gc-copy">Built-in validation and clearer metadata improved launch readiness and downstream reporting.</p>
+</div>
+</div>
+</section>
+<section class="gc-lesson-grad-dark body-copy">
+<div class="container txt-white" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">System Foundations</h2>
+<p class="gc-lesson-title">Creating reusable patterns beneath the product.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">I designed reusable structures for <strong>project setup</strong>, content blocks, preview states, launch configuration, and status visibility.</p>
+<p class="gc-copy">Patterns for <strong>survey rows</strong>, <strong>question types</strong>, <strong>map content</strong>, <strong>image handling</strong>, <strong>launch controls</strong>, and <strong>project status</strong> created a scalable foundation.</p>
+</div>
+</div>
+</section>
+<section class="gc-lesson-light body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Impact</h2>
+<p class="gc-lesson-title">Faster authoring with stronger metadata and validation.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<ul class="gc-bullets">
+<li>Shortened survey-authoring workflows and repetitive setup</li>
+<li>Reduced setup errors through earlier preview and validation</li>
+<li>Improved metadata integrity and tagging consistency</li>
+<li>Created reusable authoring patterns across QA workflows</li>
+<li>Established scalable patterns for future internal tools</li>
+</ul>
+<p class="gc-copy">The tool made logic, metadata, validation, and launch readiness clear before production.</p>
+</div>
+</div>
+</section>
+
+
+
+<section class="related-work body-copy" aria-labelledby="relatedWorkTitle">
+  <div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+    <div class="related-work-inner">
+      <p class="case-study-eyebrow" data-animate="slide-down">More Case Studies</p>
+
+      <h2 id="relatedWorkTitle" class="related-work-title">
+        Explore More Product Design Work
+      </h2>
+
+      <nav class="related-work-nav" aria-label="Related case studies">
+        <a href="apl-maps.html">Apple Maps</a>
+        <span aria-hidden="true">|</span>
+        <a href="apl-topline.html">Apple Topline</a>
+        <span aria-hidden="true">|</span>
+        <a href="audi-adas.html">Audi ADAS HMI</a>
+        <span aria-hidden="true">|</span>
+        <a href="ebay-hub.html">eBay HUB</a>
+        <span aria-hidden="true">|</span>
+        <a href="tesla.html">Tesla Fleet &amp; Energy</a>
+        <span aria-hidden="true">|</span>
+        <a href="kaiju.html">Kaijū Run</a>
+        <span aria-hidden="true">|</span>
+        <a href="ai-enterprise.html">AI Enterprise UX Intelligence</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+<footer class="site-footer-converted text-white" id="footer">
+<div class="container">
+<div class="row align-items-center g-5 footer-top">
+<div class="col-lg-6">
+<p class="footer-lead mb-4 middle">Feel free to hit me up. I'm looking forward to hearing from you.</p>
+<div class="d-flex flex-wrap justify-content-center gap-3 footer-socials">
+<a aria-label="GitHub" class="footer-social-link" href="https://github.com/tomfeeney" rel="noopener noreferrer" target="_blank">
+<img alt="GitHub" decoding="async" draggable="false" height="499" loading="lazy" src="imgs/logos/github-white.svg" width="512"/>
+</a>
+<a aria-label="LinkedIn" class="footer-social-link" href="https://www.linkedin.com/in/tommyfeeney/" rel="noopener noreferrer" target="_blank">
+<img alt="LinkedIn" decoding="async" draggable="false" height="512" loading="lazy" src="imgs/logos/linkedin.svg" width="512"/>
+</a>
+<a aria-label="Resume" class="footer-social-link" href="docs/tf-2026.pdf" rel="noopener noreferrer" target="_blank">
+<img alt="Resume" decoding="async" draggable="false" height="512" loading="lazy" src="imgs/logos/resume.svg" width="512"/>
+</a>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="footer-contact text-center">
+<a aria-label="Back to top" class="d-inline-flex mb-3" href="#intro">
+<img alt="" decoding="async" draggable="false" height="60" loading="lazy" src="imgs/logos/mark.svg" width="60"/>
+</a>
+<a class="footer-email d-block" href="mailto:tom@tfeeney-design.com">
+      tom@tfeeney-design.com
+    </a>
+</div>
+</div>
+</div>
+<nav aria-label="Footer navigation" class="footer-nav mt-5">
+<ul class="nav justify-content-center flex-wrap footer-menu">
+<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+<li class="nav-item"><a class="nav-link" href="work.html">WORK</a></li>
+<li class="nav-item"><a class="nav-link" href="index.html#sandbox">AI SANDBOX</a></li>
+<li class="nav-item"><a class="nav-link" href="consulting.html">CONSULTING</a></li>
+</ul>
+</nav>
+<div class="footer-meta mt-4 text-center">
+<p class="mb-1">Tom Feeney · Senior Product Designer · Enterprise AI · Data Platforms</p>
+<p class="mb-0">
+          © 2026 ·
+          <a href="privacy-policy.html" rel="noopener noreferrer" target="_blank">
+            Privacy policy
+          </a>
+</p>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

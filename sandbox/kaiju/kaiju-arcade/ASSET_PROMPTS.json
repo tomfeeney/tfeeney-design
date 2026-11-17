@@ -1,0 +1,14 @@
+{
+  "generator": "Built-in image_gen",
+  "assets": [
+    {
+      "file": "assets/japan-landmarks.png",
+      "prompt": "Use case: stylized-concept. Asset type: panoramic background layer for Kaiju Run web arcade game. Original Japanese monster movie illustration, heavily inked etched woodblock comic linework, grunge ink flecks and aged paper with subtle horizontal print lines, luminous forest green center fading to cyan blue on right and deep black edges, matching vintage green Tokyo city artwork. Iconic Japan skyline viewed from Tokyo Bay: Mount Fuji with snowy summit left of center in distance, unmistakable red-white Tokyo Tower on right, Tokyo Skytree further right, low dense city buildings and a small traditional pagoda. Panoramic landscape 3:1 composition. Top 45 percent open atmospheric sky for jet combat, landmarks lower 55 percent. Harbor quay only along bottom edge. No monster, no aircraft, no waves, no labels, no text, no UI, no border. This is background art, keep contrast restrained so bright existing game sprites remain readable."
+    },
+    {
+      "file": "assets/fuji-coast.png",
+      "prompt": "Use case: stylized-concept. Asset type: panoramic coastal background layer for Kaiju Run arcade game. A huge iconic snow-capped Mount Fuji above a misty Japanese bay, traditional red torii gate and distant five-story pagoda on shoreline, small fishing village and industrial harbor, side-on wide panorama 3:1. Vintage Japanese kaiju movie poster illustration, deeply inked woodblock etched linework, aged paper print lines, weathered ink flecks. Color palette forest green and cyan blue with black edges and muted amber details, same grungy green Japanese arcade aesthetic. Keep top 45 percent as open moody sky so combat jets remain visible. Fuji centered, landmarks and village lower half, no foreground ocean waves because game adds wave sprites, no monsters, aircraft, text, logos or UI. Restrained contrast background, dramatic atmosphere."
+    }
+  ],
+  "preserved": "Original Kaiju Run monster, shield, wave, aircraft, ship, effect, title, and sound assets copied unchanged. Original game and earlier abandoned rebuild untouched."
+}

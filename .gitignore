@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+*.zip
+*.psd
+sandbox/ebay-hub/.git/
+# Uncomment to keep resume, cover letter and decks out of the repo:
+# docs/

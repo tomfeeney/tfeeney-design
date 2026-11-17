@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "KJ001",
+    "category": "Kaijū Identification",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which kaijū is known as the King of the Monsters?",
+    "options": [
+      "Godzilla",
+      "Rodan",
+      "Gigan",
+      "Baragon"
+    ],
+    "answer": "Godzilla",
+    "fact": "Kaijū Identification // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ002",
+    "category": "Incident Timeline",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "What year did the original Godzilla film release in Japan?",
+    "options": [
+      "1954",
+      "1962",
+      "1975",
+      "1984"
+    ],
+    "answer": "1954",
+    "fact": "Incident Timeline // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ003",
+    "category": "Attack Profile",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "What is Godzilla’s most famous signature attack?",
+    "options": [
+      "Atomic Breath",
+      "Gravity Beams",
+      "Lightning Horn",
+      "Plasma Drill"
+    ],
+    "answer": "Atomic Breath",
+    "fact": "Attack Profile // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ004",
+    "category": "Kaijū Identification",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which kaijū is a giant moth often portrayed as a guardian?",
+    "options": [
+      "Mothra",
+      "Hedorah",
+      "Kumonga",
+      "Megalon"
+    ],
+    "answer": "Mothra",
+    "fact": "Kaijū Identification // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ005",
+    "category": "Kaijū Identification",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which kaijū is a three-headed golden dragon?",
+    "options": [
+      "King Ghidorah",
+      "Gigan",
+      "Rodan",
+      "Anguirus"
+    ],
+    "answer": "King Ghidorah",
+    "fact": "Kaijū Identification // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ006",
+    "category": "Defense Intel",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which monster is a mechanical version of Godzilla?",
+    "options": [
+      "Mechagodzilla",
+      "Jet Jaguar",
+      "M.O.G.U.E.R.A.",
+      "Gigan"
+    ],
+    "answer": "Mechagodzilla",
+    "fact": "Defense Intel // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ007",
+    "category": "Kaijū Identification",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which kaijū is commonly associated with flight and volcanic origins?",
+    "options": [
+      "Rodan",
+      "Baragon",
+      "Ebirah",
+      "Minilla"
+    ],
+    "answer": "Rodan",
+    "fact": "Kaijū Identification // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ008",
+    "category": "Origin Report",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which kaijū is strongly associated with pollution and toxic sludge?",
+    "options": [
+      "Hedorah",
+      "Mothra",
+      "Gorosaurus",
+      "King Caesar"
+    ],
+    "answer": "Hedorah",
+    "fact": "Origin Report // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ009",
+    "category": "Battle History",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which monster battled Godzilla in King Kong vs. Godzilla?",
+    "options": [
+      "King Kong",
+      "Gigan",
+      "Destoroyah",
+      "Megaguirus"
+    ],
+    "answer": "King Kong",
+    "fact": "Battle History // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ010",
+    "category": "Film Archive",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Complete the title: Godzilla vs. ______.",
+    "options": [
+      "Mechagodzilla",
+      "The Kraken",
+      "Dragon Prime",
+      "Tokyo Rex"
+    ],
+    "answer": "Mechagodzilla",
+    "fact": "Film Archive // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ011",
+    "category": "Incident Timeline",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which film directly followed the original 1954 Godzilla?",
+    "options": [
+      "Godzilla Raids Again",
+      "Mothra vs. Godzilla",
+      "Destroy All Monsters",
+      "Godzilla vs. Megalon"
+    ],
+    "answer": "Godzilla Raids Again",
+    "fact": "Incident Timeline // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ012",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū first battled Godzilla in Godzilla Raids Again?",
+    "options": [
+      "Anguirus",
+      "Rodan",
+      "Mothra",
+      "Gigan"
+    ],
+    "answer": "Anguirus",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ013",
+    "category": "Threat Assessment",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is known for its hook-like arms and visor-like eye?",
+    "options": [
+      "Gigan",
+      "Megalon",
+      "Orga",
+      "Varan"
+    ],
+    "answer": "Gigan",
+    "fact": "Threat Assessment // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ014",
+    "category": "Origin Report",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is a plant-hybrid creature connected to genetic engineering?",
+    "options": [
+      "Biollante",
+      "Megaguirus",
+      "Battra",
+      "Manda"
+    ],
+    "answer": "Biollante",
+    "fact": "Origin Report // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ015",
+    "category": "Defense Intel",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which version of Mechagodzilla is also known as Kiryu?",
+    "options": [
+      "Godzilla Against Mechagodzilla",
+      "Godzilla vs. Hedorah",
+      "Godzilla vs. Megalon",
+      "Godzilla Final Wars"
+    ],
+    "answer": "Godzilla Against Mechagodzilla",
+    "fact": "Defense Intel // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ016",
+    "category": "Defense Intel",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Kiryu was built using what remains?",
+    "options": [
+      "The bones of the original 1954 Godzilla",
+      "King Ghidorah’s wings",
+      "Mothra’s cocoon",
+      "Rodan’s fossilized beak"
+    ],
+    "answer": "The bones of the original 1954 Godzilla",
+    "fact": "Defense Intel // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ017",
+    "category": "Era Classification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which era includes The Return of Godzilla and Godzilla vs. Biollante?",
+    "options": [
+      "Heisei",
+      "Showa",
+      "Millennium",
+      "Reiwa"
+    ],
+    "answer": "Heisei",
+    "fact": "Era Classification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ018",
+    "category": "Era Classification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which era includes the original 1954 Godzilla through Terror of Mechagodzilla?",
+    "options": [
+      "Showa",
+      "Heisei",
+      "Reiwa",
+      "Monsterverse"
+    ],
+    "answer": "Showa",
+    "fact": "Era Classification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ019",
+    "category": "Era Classification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which era includes Godzilla 2000: Millennium and Godzilla Final Wars?",
+    "options": [
+      "Millennium",
+      "Showa",
+      "Heisei",
+      "Reiwa"
+    ],
+    "answer": "Millennium",
+    "fact": "Era Classification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ020",
+    "category": "Era Classification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which era includes Shin Godzilla and Godzilla Minus One?",
+    "options": [
+      "Reiwa",
+      "Showa",
+      "Heisei",
+      "Millennium"
+    ],
+    "answer": "Reiwa",
+    "fact": "Era Classification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ021",
+    "category": "Attack Profile",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which attack is most associated with King Ghidorah?",
+    "options": [
+      "Gravity Beams",
+      "Atomic Breath",
+      "Web Spray",
+      "Antenna Shock"
+    ],
+    "answer": "Gravity Beams",
+    "fact": "Attack Profile // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ022",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is a giant lobster-like creature?",
+    "options": [
+      "Ebirah",
+      "Kumonga",
+      "Megalon",
+      "Titanosaurus"
+    ],
+    "answer": "Ebirah",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ023",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is a giant spider?",
+    "options": [
+      "Kumonga",
+      "Ebirah",
+      "Varan",
+      "Manda"
+    ],
+    "answer": "Kumonga",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ024",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is a giant praying mantis-like creature?",
+    "options": [
+      "Kamacuras",
+      "Gorosaurus",
+      "Megaguirus",
+      "Baragon"
+    ],
+    "answer": "Kamacuras",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ025",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is often portrayed as Godzilla’s son?",
+    "options": [
+      "Minilla",
+      "Jet Jaguar",
+      "Baragon",
+      "Gabara"
+    ],
+    "answer": "Minilla",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ026",
+    "category": "Threat Assessment",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which monster is a dark counterpart to Mothra?",
+    "options": [
+      "Battra",
+      "Megaguirus",
+      "Hedorah",
+      "Orga"
+    ],
+    "answer": "Battra",
+    "fact": "Threat Assessment // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ027",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is a robot hero rather than a monster villain?",
+    "options": [
+      "Jet Jaguar",
+      "Gigan",
+      "Megalon",
+      "Mecha-King Ghidorah"
+    ],
+    "answer": "Jet Jaguar",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ028",
+    "category": "Threat Assessment",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which kaijū is heavily connected to crystals and space-based origins?",
+    "options": [
+      "SpaceGodzilla",
+      "Orga",
+      "Megalon",
+      "Titanosaurus"
+    ],
+    "answer": "SpaceGodzilla",
+    "fact": "Threat Assessment // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ029",
+    "category": "Origin Report",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which kaijū is linked to the Oxygen Destroyer’s legacy?",
+    "options": [
+      "Destoroyah",
+      "Biollante",
+      "Hedorah",
+      "Megaguirus"
+    ],
+    "answer": "Destoroyah",
+    "fact": "Origin Report // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ030",
+    "category": "Defense Intel",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which weapon killed the original 1954 Godzilla?",
+    "options": [
+      "Oxygen Destroyer",
+      "Maser Cannon",
+      "Dimension Tide",
+      "Super X"
+    ],
+    "answer": "Oxygen Destroyer",
+    "fact": "Defense Intel // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ031",
+    "category": "Incident Timeline",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which Godzilla movie was released in 2023?",
+    "options": [
+      "Godzilla Minus One",
+      "Shin Godzilla",
+      "Godzilla Final Wars",
+      "Godzilla vs. Kong"
+    ],
+    "answer": "Godzilla Minus One",
+    "fact": "Incident Timeline // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ032",
+    "category": "Film Archive",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which film features Godzilla and Kong teaming up against a new threat?",
+    "options": [
+      "Godzilla x Kong: The New Empire",
+      "Godzilla vs. Megalon",
+      "Godzilla Against Mechagodzilla",
+      "Godzilla Raids Again"
+    ],
+    "answer": "Godzilla x Kong: The New Empire",
+    "fact": "Film Archive // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ033",
+    "category": "Film Archive",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which 2014 Hollywood film reintroduced Godzilla to the Monsterverse?",
+    "options": [
+      "Godzilla",
+      "Godzilla 2000",
+      "Shin Godzilla",
+      "Godzilla Final Wars"
+    ],
+    "answer": "Godzilla",
+    "fact": "Film Archive // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ034",
+    "category": "Battle History",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which 2021 film features a major battle between Godzilla and Kong?",
+    "options": [
+      "Godzilla vs. Kong",
+      "King Kong vs. Godzilla",
+      "Destroy All Monsters",
+      "Godzilla vs. Gigan"
+    ],
+    "answer": "Godzilla vs. Kong",
+    "fact": "Battle History // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ035",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which film introduced Orga as an alien creature trying to harvest Godzilla’s DNA?",
+    "options": [
+      "Godzilla 2000: Millennium",
+      "Godzilla Final Wars",
+      "Godzilla vs. Megaguirus",
+      "Shin Godzilla"
+    ],
+    "answer": "Godzilla 2000: Millennium",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ036",
+    "category": "Defense Intel",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which film involves a black hole weapon and prehistoric insects?",
+    "options": [
+      "Godzilla vs. Megaguirus",
+      "Godzilla vs. Hedorah",
+      "Godzilla vs. Biollante",
+      "Godzilla vs. Megalon"
+    ],
+    "answer": "Godzilla vs. Megaguirus",
+    "fact": "Defense Intel // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ037",
+    "category": "Battle History",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie has Godzilla battle Mothra, King Ghidorah, and Baragon as Guardian Monsters?",
+    "options": [
+      "Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack",
+      "Destroy All Monsters",
+      "Godzilla vs. King Ghidorah",
+      "Godzilla Final Wars"
+    ],
+    "answer": "Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack",
+    "fact": "Battle History // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ038",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which Godzilla film is known for a metamorphic version of Godzilla attacking Japan?",
+    "options": [
+      "Shin Godzilla",
+      "Godzilla Minus One",
+      "Godzilla vs. Destoroyah",
+      "The Return of Godzilla"
+    ],
+    "answer": "Shin Godzilla",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ039",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which Godzilla film is set in postwar Japan?",
+    "options": [
+      "Godzilla Minus One",
+      "Godzilla vs. Biollante",
+      "Godzilla 2000",
+      "Godzilla vs. Kong"
+    ],
+    "answer": "Godzilla Minus One",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ040",
+    "category": "Incident Timeline",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which Godzilla film was released in 1984?",
+    "options": [
+      "The Return of Godzilla",
+      "Godzilla vs. Biollante",
+      "Godzilla vs. King Ghidorah",
+      "Godzilla Final Wars"
+    ],
+    "answer": "The Return of Godzilla",
+    "fact": "Incident Timeline // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ041",
+    "category": "Battle History",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which kaijū joins Godzilla and Mothra against King Ghidorah in Ghidorah, the Three-Headed Monster?",
+    "options": [
+      "Rodan",
+      "Gigan",
+      "Hedorah",
+      "Orga"
+    ],
+    "answer": "Rodan",
+    "fact": "Battle History // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ042",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is a giant beetle-like underground monster often associated with Seatopia?",
+    "options": [
+      "Megalon",
+      "Baragon",
+      "Varan",
+      "Titanosaurus"
+    ],
+    "answer": "Megalon",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ043",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is a dinosaur-like monster with a burrowing ability and a glowing horn in some appearances?",
+    "options": [
+      "Baragon",
+      "Gigan",
+      "Manda",
+      "Ebirah"
+    ],
+    "answer": "Baragon",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ044",
+    "category": "Kaijū Identification",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is an ancient guardian lion-like monster?",
+    "options": [
+      "King Caesar",
+      "Gorosaurus",
+      "Titanosaurus",
+      "Gabara"
+    ],
+    "answer": "King Caesar",
+    "fact": "Kaijū Identification // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ045",
+    "category": "Threat Assessment",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which monster is the final form after Monster X transforms in Godzilla Final Wars?",
+    "options": [
+      "Keizer Ghidorah",
+      "Mecha-King Ghidorah",
+      "SpaceGodzilla",
+      "Destoroyah"
+    ],
+    "answer": "Keizer Ghidorah",
+    "fact": "Threat Assessment // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ046",
+    "category": "Kaijū Identification",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which cyborg kaijū is a rebuilt version of King Ghidorah?",
+    "options": [
+      "Mecha-King Ghidorah",
+      "Kiryu",
+      "M.O.G.U.E.R.A.",
+      "Monster X"
+    ],
+    "answer": "Mecha-King Ghidorah",
+    "fact": "Kaijū Identification // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ047",
+    "category": "Kaijū Identification",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which machine appeared as a defense robot in the Heisei era?",
+    "options": [
+      "M.O.G.U.E.R.A.",
+      "Jet Jaguar",
+      "Kiryu",
+      "Gigan"
+    ],
+    "answer": "M.O.G.U.E.R.A.",
+    "fact": "Kaijū Identification // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ048",
+    "category": "Kaijū Identification",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which kaijū is a giant sea serpent-like creature?",
+    "options": [
+      "Manda",
+      "Ebirah",
+      "Varan",
+      "Kumonga"
+    ],
+    "answer": "Manda",
+    "fact": "Kaijū Identification // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ049",
+    "category": "Kaijū Identification",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which kaijū is a gliding reptilian monster?",
+    "options": [
+      "Varan",
+      "Gabara",
+      "Megalon",
+      "Kamacuras"
+    ],
+    "answer": "Varan",
+    "fact": "Kaijū Identification // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ050",
+    "category": "Kaijū Identification",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which kaijū is a giant dinosaur that fought King Kong before appearing in Godzilla media?",
+    "options": [
+      "Gorosaurus",
+      "Titanosaurus",
+      "Godzillasaurus",
+      "Baragon"
+    ],
+    "answer": "Gorosaurus",
+    "fact": "Kaijū Identification // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ051",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie features Godzilla battling a series of fan-favorite monsters before a final confrontation?",
+    "options": [
+      "Godzilla Final Wars",
+      "Destroy All Monsters",
+      "Godzilla vs. Megalon",
+      "Godzilla vs. Hedorah"
+    ],
+    "answer": "Godzilla Final Wars",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ052",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie features Mothra and Kiryu teaming up against Godzilla?",
+    "options": [
+      "Godzilla: Tokyo SOS",
+      "Mothra vs. Godzilla",
+      "Godzilla vs. Mechagodzilla II",
+      "Godzilla vs. SpaceGodzilla"
+    ],
+    "answer": "Godzilla: Tokyo SOS",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ053",
+    "category": "Incident Timeline",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which Godzilla movie was released in 1999?",
+    "options": [
+      "Godzilla 2000: Millennium",
+      "Godzilla vs. Megaguirus",
+      "Godzilla Final Wars",
+      "Godzilla Against Mechagodzilla"
+    ],
+    "answer": "Godzilla 2000: Millennium",
+    "fact": "Incident Timeline // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ054",
+    "category": "Incident Timeline",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which Godzilla movie was released in 2004?",
+    "options": [
+      "Godzilla Final Wars",
+      "Shin Godzilla",
+      "Godzilla Against Mechagodzilla",
+      "Godzilla vs. Megaguirus"
+    ],
+    "answer": "Godzilla Final Wars",
+    "fact": "Incident Timeline // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ055",
+    "category": "Incident Timeline",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie released first?",
+    "options": [
+      "Mothra vs. Godzilla",
+      "Godzilla vs. Hedorah",
+      "Godzilla vs. Megalon",
+      "Godzilla Final Wars"
+    ],
+    "answer": "Mothra vs. Godzilla",
+    "fact": "Incident Timeline // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ056",
+    "category": "Incident Timeline",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie released first?",
+    "options": [
+      "Godzilla Raids Again",
+      "King Kong vs. Godzilla",
+      "Ghidorah, the Three-Headed Monster",
+      "Godzilla vs. Gigan"
+    ],
+    "answer": "Godzilla Raids Again",
+    "fact": "Incident Timeline // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ057",
+    "category": "Incident Timeline",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which movie released later?",
+    "options": [
+      "Godzilla x Kong: The New Empire",
+      "Godzilla vs. Kong",
+      "Godzilla: King of the Monsters",
+      "Godzilla 2014"
+    ],
+    "answer": "Godzilla x Kong: The New Empire",
+    "fact": "Incident Timeline // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ058",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which Hollywood Godzilla film was directed by Gareth Edwards?",
+    "options": [
+      "Godzilla 2014",
+      "Godzilla 1998",
+      "Godzilla vs. Kong",
+      "Godzilla x Kong: The New Empire"
+    ],
+    "answer": "Godzilla 2014",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ059",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which Hollywood Godzilla film was directed by Roland Emmerich?",
+    "options": [
+      "Godzilla 1998",
+      "Godzilla 2014",
+      "Godzilla vs. Kong",
+      "Godzilla: King of the Monsters"
+    ],
+    "answer": "Godzilla 1998",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ060",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which Monsterverse organization studies Titans?",
+    "options": [
+      "Monarch",
+      "G-Force",
+      "Seatopia",
+      "Red Bamboo"
+    ],
+    "answer": "Monarch",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ061",
+    "category": "Attack Profile",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which kaijū is most associated with webbing, wings, and guardian symbolism?",
+    "options": [
+      "Mothra",
+      "Megaguirus",
+      "Kamacuras",
+      "Battra"
+    ],
+    "answer": "Mothra",
+    "fact": "Attack Profile // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ062",
+    "category": "Attack Profile",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is associated with drill-like hands?",
+    "options": [
+      "Megalon",
+      "Rodan",
+      "Baragon",
+      "Ebirah"
+    ],
+    "answer": "Megalon",
+    "fact": "Attack Profile // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ063",
+    "category": "Attack Profile",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which monster is known for cybernetic weapons and bladed arms?",
+    "options": [
+      "Gigan",
+      "Manda",
+      "Kumonga",
+      "Minilla"
+    ],
+    "answer": "Gigan",
+    "fact": "Attack Profile // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ064",
+    "category": "Threat Assessment",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is usually one of Godzilla’s most dangerous alien enemies?",
+    "options": [
+      "King Ghidorah",
+      "Anguirus",
+      "King Caesar",
+      "Minilla"
+    ],
+    "answer": "King Ghidorah",
+    "fact": "Threat Assessment // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ065",
+    "category": "Ally / Enemy Status",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū has often shifted between rival, ally, and threat depending on the story?",
+    "options": [
+      "Rodan",
+      "Hedorah",
+      "Ebirah",
+      "Gabara"
+    ],
+    "answer": "Rodan",
+    "fact": "Ally / Enemy Status // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ066",
+    "category": "Ally / Enemy Status",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which kaijū is often portrayed as a loyal ally or battle companion to Godzilla?",
+    "options": [
+      "Anguirus",
+      "Destoroyah",
+      "Hedorah",
+      "Orga"
+    ],
+    "answer": "Anguirus",
+    "fact": "Ally / Enemy Status // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ067",
+    "category": "Threat Assessment",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which kaijū is a major final enemy in the Heisei Godzilla series?",
+    "options": [
+      "Destoroyah",
+      "Gabara",
+      "Ebirah",
+      "Kamacuras"
+    ],
+    "answer": "Destoroyah",
+    "fact": "Threat Assessment // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ068",
+    "category": "Origin Report",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which creature represents Godzilla before mutation in some Heisei continuity?",
+    "options": [
+      "Godzillasaurus",
+      "Gorosaurus",
+      "Baragon",
+      "Titanosaurus"
+    ],
+    "answer": "Godzillasaurus",
+    "fact": "Origin Report // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ069",
+    "category": "Kaijū Identification",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which kaijū is a giant aquatic dinosaur controlled by humans in Terror of Mechagodzilla?",
+    "options": [
+      "Titanosaurus",
+      "Varan",
+      "Manda",
+      "Gorosaurus"
+    ],
+    "answer": "Titanosaurus",
+    "fact": "Kaijū Identification // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ070",
+    "category": "Kaijū Identification",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which monster is a bully-like creature from All Monsters Attack?",
+    "options": [
+      "Gabara",
+      "Megalon",
+      "Orga",
+      "Kumonga"
+    ],
+    "answer": "Gabara",
+    "fact": "Kaijū Identification // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ071",
+    "category": "Film Archive",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which movie title includes the phrase King of the Monsters?",
+    "options": [
+      "Godzilla: King of the Monsters",
+      "Godzilla: City on the Edge of Battle",
+      "Godzilla: Tokyo SOS",
+      "Godzilla Against Mechagodzilla"
+    ],
+    "answer": "Godzilla: King of the Monsters",
+    "fact": "Film Archive // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ072",
+    "category": "Film Archive",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which movie title includes the word Minus?",
+    "options": [
+      "Godzilla Minus One",
+      "Godzilla Final Wars",
+      "Godzilla 2000",
+      "Godzilla vs. Biollante"
+    ],
+    "answer": "Godzilla Minus One",
+    "fact": "Film Archive // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ073",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie title includes the words Final Wars?",
+    "options": [
+      "Godzilla Final Wars",
+      "Destroy All Monsters",
+      "Godzilla vs. Destoroyah",
+      "Godzilla vs. Megaguirus"
+    ],
+    "answer": "Godzilla Final Wars",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ074",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie title includes Tokyo SOS?",
+    "options": [
+      "Godzilla: Tokyo SOS",
+      "Shin Godzilla",
+      "Godzilla 2000",
+      "Godzilla Raids Again"
+    ],
+    "answer": "Godzilla: Tokyo SOS",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ075",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie title includes Giant Monsters All-Out Attack?",
+    "options": [
+      "Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack",
+      "Godzilla Against Mechagodzilla",
+      "Godzilla vs. SpaceGodzilla",
+      "Godzilla x Kong: The New Empire"
+    ],
+    "answer": "Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ076",
+    "category": "Incident Timeline",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which of these was released in the Heisei era?",
+    "options": [
+      "Godzilla vs. Biollante",
+      "Godzilla Final Wars",
+      "Shin Godzilla",
+      "Godzilla vs. Megalon"
+    ],
+    "answer": "Godzilla vs. Biollante",
+    "fact": "Incident Timeline // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ077",
+    "category": "Incident Timeline",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which of these was released in the Millennium era?",
+    "options": [
+      "Godzilla Against Mechagodzilla",
+      "The Return of Godzilla",
+      "Godzilla Minus One",
+      "Godzilla Raids Again"
+    ],
+    "answer": "Godzilla Against Mechagodzilla",
+    "fact": "Incident Timeline // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ078",
+    "category": "Incident Timeline",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which of these was released in the Showa era?",
+    "options": [
+      "Godzilla vs. Megalon",
+      "Godzilla vs. SpaceGodzilla",
+      "Shin Godzilla",
+      "Godzilla 2000"
+    ],
+    "answer": "Godzilla vs. Megalon",
+    "fact": "Incident Timeline // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ079",
+    "category": "Incident Timeline",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which of these was released in the Reiwa era?",
+    "options": [
+      "Shin Godzilla",
+      "Godzilla vs. Destoroyah",
+      "Godzilla Against Mechagodzilla",
+      "Godzilla vs. Gigan"
+    ],
+    "answer": "Shin Godzilla",
+    "fact": "Incident Timeline // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ080",
+    "category": "Threat Assessment",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which monster is a giant mutated ankylosaur-like kaijū?",
+    "options": [
+      "Anguirus",
+      "Manda",
+      "Ebirah",
+      "Hedorah"
+    ],
+    "answer": "Anguirus",
+    "fact": "Threat Assessment // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ081",
+    "category": "Defense Intel",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which group name is commonly connected with anti-Godzilla military operations in some films?",
+    "options": [
+      "G-Force",
+      "Monarch",
+      "Seatopia",
+      "Infant Island"
+    ],
+    "answer": "G-Force",
+    "fact": "Defense Intel // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ082",
+    "category": "Location Intel",
+    "difficulty": "easy",
+    "type": "choice",
+    "question": "Which city is most famously associated with Godzilla attacks?",
+    "options": [
+      "Tokyo",
+      "London",
+      "Paris",
+      "Rome"
+    ],
+    "answer": "Tokyo",
+    "fact": "Location Intel // EASY THREAT FILE"
+  },
+  {
+    "id": "KJ083",
+    "category": "Location Intel",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which island is strongly associated with Mothra?",
+    "options": [
+      "Infant Island",
+      "Monster Island",
+      "Letchi Island",
+      "Skull Island"
+    ],
+    "answer": "Infant Island",
+    "fact": "Location Intel // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ084",
+    "category": "Location Intel",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which fictional undersea civilization is associated with Megalon?",
+    "options": [
+      "Seatopia",
+      "Monarch",
+      "Odo Island",
+      "Planet X"
+    ],
+    "answer": "Seatopia",
+    "fact": "Location Intel // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ085",
+    "category": "Location Intel",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which alien location is associated with Monster Zero?",
+    "options": [
+      "Planet X",
+      "Infant Island",
+      "Letchi Island",
+      "Monster Island"
+    ],
+    "answer": "Planet X",
+    "fact": "Location Intel // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ086",
+    "category": "Threat Assessment",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Monster Zero is another name often associated with which kaijū?",
+    "options": [
+      "King Ghidorah",
+      "Rodan",
+      "Gigan",
+      "Mechagodzilla"
+    ],
+    "answer": "King Ghidorah",
+    "fact": "Threat Assessment // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ087",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie features astronauts discovering Monster Zero on Planet X?",
+    "options": [
+      "Invasion of Astro-Monster",
+      "Godzilla vs. Megalon",
+      "Destroy All Monsters",
+      "Godzilla vs. Gigan"
+    ],
+    "answer": "Invasion of Astro-Monster",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ088",
+    "category": "Battle History",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie first brought Mothra and Godzilla into a major cinematic clash?",
+    "options": [
+      "Mothra vs. Godzilla",
+      "Ghidorah, the Three-Headed Monster",
+      "Godzilla vs. Mothra",
+      "Godzilla Final Wars"
+    ],
+    "answer": "Mothra vs. Godzilla",
+    "fact": "Battle History // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ089",
+    "category": "Battle History",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which movie has Godzilla, Rodan, and Mothra join forces against King Ghidorah?",
+    "options": [
+      "Ghidorah, the Three-Headed Monster",
+      "Godzilla vs. Mechagodzilla",
+      "Godzilla vs. Hedorah",
+      "Godzilla vs. Destoroyah"
+    ],
+    "answer": "Ghidorah, the Three-Headed Monster",
+    "fact": "Battle History // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ090",
+    "category": "Threat Assessment",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which monster is a mutated alien creature that tries to absorb Godzilla’s DNA?",
+    "options": [
+      "Orga",
+      "Gigan",
+      "Megalon",
+      "Battra"
+    ],
+    "answer": "Orga",
+    "fact": "Threat Assessment // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ091",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which anime Godzilla film begins after humanity has fled Earth for thousands of years?",
+    "options": [
+      "GODZILLA: Planet of the Monsters",
+      "GODZILLA: The Planet Eater",
+      "GODZILLA: Singular Point",
+      "Godzilla Minus One"
+    ],
+    "answer": "GODZILLA: Planet of the Monsters",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ092",
+    "category": "Film Archive",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which anime film is the final installment of the Polygon Pictures Godzilla anime trilogy?",
+    "options": [
+      "GODZILLA: The Planet Eater",
+      "GODZILLA: Planet of the Monsters",
+      "GODZILLA: A City on the Edge of Battle",
+      "Godzilla 2000"
+    ],
+    "answer": "GODZILLA: The Planet Eater",
+    "fact": "Film Archive // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ093",
+    "category": "Defense Intel",
+    "difficulty": "medium",
+    "type": "choice",
+    "question": "Which anime trilogy entry features Mechagodzilla City?",
+    "options": [
+      "GODZILLA: A City on the Edge of Battle",
+      "GODZILLA: The Planet Eater",
+      "Shin Godzilla",
+      "Godzilla Final Wars"
+    ],
+    "answer": "GODZILLA: A City on the Edge of Battle",
+    "fact": "Defense Intel // MEDIUM THREAT FILE"
+  },
+  {
+    "id": "KJ094",
+    "category": "Kaijū Identification",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which name is associated with the 1998 American Godzilla creature in later Toho media?",
+    "options": [
+      "Zilla",
+      "Orga",
+      "Varan",
+      "Gabara"
+    ],
+    "answer": "Zilla",
+    "fact": "Kaijū Identification // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ095",
+    "category": "Film Archive",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which Godzilla film features a crustacean kaijū and the Red Bamboo group?",
+    "options": [
+      "Ebirah, Horror of the Deep",
+      "Godzilla vs. Hedorah",
+      "Godzilla vs. Megalon",
+      "Son of Godzilla"
+    ],
+    "answer": "Ebirah, Horror of the Deep",
+    "fact": "Film Archive // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ096",
+    "category": "Film Archive",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which movie features Minilla and giant insects on an island?",
+    "options": [
+      "Son of Godzilla",
+      "Godzilla Raids Again",
+      "Destroy All Monsters",
+      "Godzilla vs. Gigan"
+    ],
+    "answer": "Son of Godzilla",
+    "fact": "Film Archive // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ097",
+    "category": "Battle History",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which kaijū is paired with Gigan as an enemy in Godzilla vs. Megalon?",
+    "options": [
+      "Megalon",
+      "Manda",
+      "Baragon",
+      "Varan"
+    ],
+    "answer": "Megalon",
+    "fact": "Battle History // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ098",
+    "category": "Film Archive",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which film ends the original Showa-era Godzilla run?",
+    "options": [
+      "Terror of Mechagodzilla",
+      "Godzilla vs. Megalon",
+      "Destroy All Monsters",
+      "Godzilla vs. Hedorah"
+    ],
+    "answer": "Terror of Mechagodzilla",
+    "fact": "Film Archive // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ099",
+    "category": "Film Archive",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which film ends the Heisei Godzilla run?",
+    "options": [
+      "Godzilla vs. Destoroyah",
+      "Godzilla vs. SpaceGodzilla",
+      "Godzilla vs. Mechagodzilla II",
+      "Godzilla vs. King Ghidorah"
+    ],
+    "answer": "Godzilla vs. Destoroyah",
+    "fact": "Film Archive // HARD THREAT FILE"
+  },
+  {
+    "id": "KJ100",
+    "category": "Film Archive",
+    "difficulty": "hard",
+    "type": "choice",
+    "question": "Which film ends the Millennium Godzilla run?",
+    "options": [
+      "Godzilla Final Wars",
+      "Godzilla: Tokyo SOS",
+      "Godzilla Against Mechagodzilla",
+      "Godzilla 2000: Millennium"
+    ],
+    "answer": "Godzilla Final Wars",
+    "fact": "Film Archive // HARD THREAT FILE"
+  }
+]

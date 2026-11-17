@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SignalDesk AI — Product Feedback Triage</title>
+  <meta name="description" content="AI-backed product feedback triage for UX, product, support, QA, and customer-facing teams." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/ai-enterprise.css" />
+</head>
+<body class="body-copy screen-effect">
+  <header class="app-shell hero content body-copy" id="heroSection">
+    <nav class="d-flex align-items-center justify-content-between gap-3 mb-3">
+      <a class="brand" href="#" aria-label="SignalDesk AI home">
+        <img src="assets/enterprise-wht.svg" class="img-fluid d-block" loading="lazy" alt="Tom Feeney logo" draggable="false" width="48" height="91" />
+        <span><strong>SignalDesk AI</strong><small>Product feedback triage · v1.8</small></span>
+      </a>
+      <a class="btn btn-outline-light btn-sm" href="mailto:hello@tfeeney-design.com?subject=Book%20a%20SignalDesk%20AI%20Feedback%20Audit">Book Audit</a>
+    </nav>
+
+    <section class="panel hero-panel">
+      <div class="row g-4 align-items-end">
+        <div class="col-12 col-xl-10">
+          <p class="eyebrow">AI product feedback triage · Human-reviewed outputs</p>
+          <h1>Turn messy customer feedback into product decisions.</h1>
+          <p class="lede">Paste support tickets, research notes, QA findings, product feedback, customer complaints, incident updates, URLs, or lightweight source files. SignalDesk AI turns scattered inputs into priority, ownership, impact, confidence, reasoning, next steps, and handoff-ready reports.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a class="btn btn-primary btn-lg" href="#workspace">Try Triage</a>
+            <a class="btn btn-outline-light btn-lg" href="#paidOffer">See Paid Audit</a>
+            <button class="btn btn-outline-light btn-lg" id="loadSampleTop" type="button">Load Sample</button>
+            <button class="btn btn-ghost btn-lg info-link" type="button" data-drawer-topic="how">How it works</button>
+            <button class="btn btn-ghost btn-lg info-link" type="button" data-drawer-topic="principles">Design principles</button>
+          </div>
+          <div class="revenue-proof-row" aria-label="SignalDesk AI outcomes">
+            <span>Theme clustering</span>
+            <span>Jira-ready tickets</span>
+            <span>Executive summaries</span>
+            <span>Roadmap signals</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="app-shell content body-copy" id="workspace">
+    <section class="panel workflow-steps mb-3" aria-label="Three-step triage workflow">
+      <div class="workflow-step-card is-active" data-step="1" role="button" tabindex="0">
+        <span>Step 1</span>
+        <strong>Enter signal</strong>
+        <p>Add the issue, source URL, file context, or pasted notes the AI should review.</p>
+      </div>
+      <div class="workflow-step-card" data-step="2" role="button" tabindex="0">
+        <span>Step 2</span>
+        <strong>Review results</strong>
+        <p>See priority, owner, impact, confidence, charts, clusters, and editable signal rows.</p>
+      </div>
+      <div class="workflow-step-card" data-step="3" role="button" tabindex="0">
+        <span>Step 3</span>
+        <strong>Take action</strong>
+        <p>Copy a Jira ticket, send a coworker update, save the session, or download handoff docs.</p>
+      </div>
+    </section>
+
+    <div class="workflow-step-stack">
+      <section class="panel input-panel workflow-step-page" id="inputPanel">
+        <div class="panel-header">
+          <div><p class="eyebrow">Step 1 · Intake</p><h2>Enter a signal and source context</h2></div>
+        </div>
+        <p class="step-panel-copy">Start with one messy enterprise signal, then add any URL, file, ticket text, research note, or operational context that helps explain it.</p>
+
+        <div class="input-guidance-panel" aria-label="Input guidance">
+          <div>
+            <p class="eyebrow">Start here</p>
+            <h3>Paste any messy product signal</h3>
+            <p>Support tickets, QA notes, customer complaints, stakeholder asks, incident updates, or research findings all work. The system will convert the messy input into priority, ownership, confidence, risk, and next actions.</p>
+          </div>
+          <div class="example-chip-row" aria-label="Example signal types">
+            <button type="button" data-sample="support">Support ticket</button>
+            <button type="button" data-sample="qa">QA release blocker</button>
+            <button type="button" data-sample="research">Research finding</button>
+          </div>
+        </div>
+
+        <label for="sourceUrlInput" class="form-label">1. Add a source URL</label>
+        <div class="source-url-row">
+          <input id="sourceUrlInput" class="form-control" type="url" inputmode="url" placeholder="Paste a Jira, Zendesk, research doc, Figma, incident, or customer thread URL…" />
+          <button class="btn btn-outline-light" id="addUrlBtn" type="button">Add URL</button>
+        </div>
+        <p class="mini-note mt-2 mb-1">URLs are included as source evidence for the AI review. Server-side fetching can be added later when the host allows authenticated URL access.</p>
+        <p class="validation-message" id="sourceUrlValidation" aria-live="polite">Use a complete URL such as https://example.com/ticket/123.</p>
+
+        <label class="form-label">2. Upload supporting files</label>
+        <input
+          id="documentUploadInput"
+          class="visually-hidden"
+          type="file"
+          multiple
+          accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.txt,.md,.markdown,.json,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/plain,text/csv,application/json"
+        />
+        <div class="file-drop-zone" id="fileDropZone" role="button" tabindex="0" aria-describedby="fileDropStatus">
+          <strong>Drop files here</strong>
+          <span>or choose files to attach to this triage run.</span>
+          <button class="btn btn-ghost btn-sm mt-2" id="chooseFilesBtn" type="button">Choose Files</button>
+        </div>
+        <div class="file-drop-status" id="fileDropStatus" aria-live="polite">
+          .txt, .md, .csv, and .json files are read directly in the browser. PDF, DOCX, and XLSX files are attached as source metadata until server-side parsing is connected.
+        </div>
+
+        <div class="source-tray" id="sourceTray" aria-live="polite">
+          <span class="source-empty">No source URLs or files attached yet.</span>
+        </div>
+
+        <div class="paste-header-row mt-3">
+          <label for="signalInput" class="form-label mb-0">3. Paste notes, tickets, or findings</label>
+          <div class="paste-example-links" aria-label="Example scenarios">
+            <span>Examples:</span>
+            <button type="button" data-sample="support">Support Escalation</button>
+            <button type="button" data-sample="qa">QA Release Risk</button>
+            <button type="button" data-sample="research">Research Synthesis</button>
+            <button type="button" data-sample="incident">Incident Response</button>
+          </div>
+        </div>
+        <textarea id="signalInput" class="form-control signal-input" rows="12" placeholder="Paste support tickets, QA notes, incident updates, customer feedback, research findings, or product feedback here…"></textarea>
+
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <button class="btn btn-primary" id="analyzeBtn" type="button">Run AI Triage</button>
+          <button class="btn btn-outline-light" id="loadSampleBtn" type="button">Load Sample</button>
+          <button class="btn btn-ghost" id="clearBtn" type="button">Clear</button>
+        </div>
+      </section>
+
+      <section class="panel processing-panel workflow-step-page" id="processingPanel" hidden aria-live="polite">
+        <div class="panel-header">
+          <div><p class="eyebrow">AI triage in progress</p><h2>Building the review workspace</h2></div>
+          <span class="badge-soft" id="processingStageCount">0 / 7</span>
+        </div>
+        <p class="step-panel-copy">We’re turning the signal, files, URLs, and notes into a structured review: priority, owner routing, confidence, risk, recommended action, and handoff-ready outputs.</p>
+        <div class="processing-progress" aria-hidden="true"><span id="processingProgressBar"></span></div>
+        <ul class="processing-stage-list" id="processingStageList">
+          <li>Preparing signal intake…</li>
+          <li>Reading attached sources…</li>
+          <li>Extracting UX signals…</li>
+          <li>Scoring risk and confidence…</li>
+          <li>Mapping owners and impact…</li>
+          <li>Building action plan…</li>
+          <li>Preparing review workspace…</li>
+        </ul>
+      </section>
+
+      <section class="panel ai-review-panel workflow-result-panel" id="aiReviewPanel" hidden>
+        <div class="panel-header">
+          <div><p class="eyebrow">Step 2 · AI Review</p><h2>Review the AI results</h2></div>
+          <span class="badge-soft" id="reviewBadge" aria-live="polite">Not run</span>
+        </div>
+        <p class="step-panel-copy">The AI output is organized for human review: use the summary, color-coded risk areas, charts, clusters, and editable rows to decide what happens next.</p>
+
+        <div class="status-line mb-3"><span class="status-dot" id="statusDot"></span><span id="aiStatus">Real AI route ready</span></div>
+
+        <div class="metric-grid ai-review-metrics mb-3">
+          <div><strong id="signalCount">0</strong><span>Signals</span></div>
+          <div><strong id="highCount">0</strong><span>High Risk</span></div>
+          <div><strong id="confidence">—</strong><span>Confidence</span></div>
+          <div><strong id="clusterCount">0</strong><span>Clusters</span></div>
+        </div>
+
+        <aside class="recommended-next-move" id="recommendedNextMove">
+          <span>Recommended next move</span>
+          <p>Run triage to get a focused recommendation for what to review first and what should happen before handoff.</p>
+        </aside>
+
+        <section class="signal-charts mt-3" aria-label="Signal charts">
+          <div class="chart-header">
+            <div>
+              <p class="eyebrow">Signal Charts</p>
+              <h3>Risk, routing, and confidence</h3>
+              <p class="chart-section-copy">These charts turn the triage result into review guidance: what needs escalation, where work may bottleneck, and which recommendations need human verification.</p>
+            </div>
+            <span class="chart-legend">Good = green · Watch = orange · Risk = red</span>
+          </div>
+          <div class="chart-grid">
+            <article class="chart-card">
+              <span>Priority mix</span>
+              <p class="chart-value-note"><strong>Value:</strong> Shows the run’s risk load so reviewers know whether to escalate now, schedule validation, or backlog.</p>
+              <div class="chart-bars" id="priorityChart"><p class="chart-empty">Run triage to visualize priority.</p></div>
+              <p class="chart-readout" id="priorityChartReadout">No priority pattern yet.</p>
+            </article>
+            <article class="chart-card">
+              <span>Owner routing</span>
+              <p class="chart-value-note"><strong>Value:</strong> Shows whether ownership is balanced or one team is becoming the bottleneck for follow-up.</p>
+              <div class="chart-bars" id="ownerChart"><p class="chart-empty">Run triage to visualize ownership.</p></div>
+              <p class="chart-readout" id="ownerChartReadout">No owner pattern yet.</p>
+            </article>
+            <article class="chart-card">
+              <span>Confidence spread</span>
+              <p class="chart-value-note"><strong>Value:</strong> Shows which AI recommendations are ready to act on versus which need human review before assignment.</p>
+              <div class="chart-bars" id="confidenceChart"><p class="chart-empty">Run triage to visualize confidence.</p></div>
+              <p class="chart-readout" id="confidenceChartReadout">No confidence pattern yet.</p>
+            </article>
+          </div>
+          <article class="priority-matrix-card mt-3" aria-label="Priority matrix">
+            <div>
+              <span>Priority matrix</span>
+              <p class="chart-value-note"><strong>Value:</strong> Combines risk/impact and effort so teams can spot do-now work, planned work, quick wins, and deferrable items.</p>
+            </div>
+            <div class="priority-matrix" id="priorityMatrix"><p class="chart-empty">Run triage to map signals by impact and effort.</p></div>
+          </article>
+        </section>
+
+        <section class="v15-decision-panel mb-3" aria-label="Decision summary">
+          <div class="v15-decision-copy">
+            <p class="eyebrow">Decision Workspace</p>
+            <h3>Decision Summary</h3>
+            <p id="decisionReadout">Run triage to get an executive readout of risk, owner concentration, confidence, and recommended next moves.</p>
+          </div>
+        </section>
+
+        <section class="v16-intelligence-panel mb-3" aria-label="Review readiness and transformation summary">
+          <article class="v16-readiness-card">
+            <span>Review Readiness</span>
+            <strong id="readinessScore">—</strong>
+            <p id="handoffReadinessText">Run triage to see whether the output is ready for assignment, needs validation, or has bottleneck risk.</p>
+          </article>
+          <article class="v16-before-after-card">
+            <span>Before / After AI</span>
+            <p id="beforeAfterText">Before: messy notes, tickets, sources, and feedback. After: structured signals, clusters, risk scores, workflow states, and handoff-ready actions.</p>
+          </article>
+        </section>
+
+        <div class="summary-grid">
+          <article class="summary-card" id="priorityCard"><span>Priority</span><strong id="overallPriority">—</strong><small id="priorityReason">Run AI analysis to generate priority.</small></article>
+          <article class="summary-card" id="impactCard"><span>Impact</span><strong id="primaryImpact">—</strong><small>Primary business impact.</small></article>
+          <article class="summary-card" id="ownerCard"><span>Owner</span><strong id="primaryOwner">—</strong><small>Suggested first-pass team.</small></article>
+          <article class="summary-card" id="confidenceCard"><span>Confidence</span><strong id="summaryConfidence">—</strong><small>Human review still required.</small></article>
+        </div>
+
+
+
+        <div class="insight mt-3"><h3>Executive Summary</h3><p id="summaryText">AI-generated summary will appear here.</p></div>
+        <div class="insight mt-3"><h3>Suggested Next Step</h3><p id="nextStep">Recommended action will appear here.</p></div>
+        <div class="insight action-plan-panel mt-3">
+          <div class="action-plan-header">
+            <h3>Action Plan</h3>
+            <span id="actionPlanBadge">Waiting for triage</span>
+          </div>
+          <ol id="actionPlanList" class="action-plan-list">
+            <li>Run triage to generate recommended actions for escalation, validation, assignment, and follow-up.</li>
+          </ol>
+        </div>
+        <details class="why mt-3"><summary>Why this recommendation?</summary><p id="whyText">AI reasoning will appear here.</p></details>
+
+        <div class="step-actions mt-3">
+          <button class="btn btn-primary" id="continueToActionsBtn" type="button" disabled>Continue to Step 3 · Take Action →</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel mt-3 cluster-panel workflow-result-panel" id="clusterPanel" hidden>
+      <div class="panel-header">
+        <div><p class="eyebrow">Step 2 · Pattern Detection</p><h2>Signal Clusters</h2></div>
+        <span class="badge-soft" id="clusterBadge">No clusters yet</span>
+      </div>
+      <div class="cluster-list" id="clusterList">
+        <p class="empty-state mb-0">Run triage to group related signals and expose likely duplicate issue patterns.</p>
+      </div>
+    </section>
+
+    <section class="panel mt-3 workflow-result-panel" id="signalBreakdownPanel" hidden>
+      <div class="panel-header">
+        <div><p class="eyebrow">Step 2 · Breakdown</p><h2>UX Signal Table</h2></div>
+      </div>
+      <p class="step-panel-copy">This summary shows the strongest patterns in the current triage run: how much risk exists, which teams may be overloaded, and how many signals affect customers.</p>
+      <div class="stats-grid stats-grid-four mb-3">
+        <div class="stat-card-enhanced"><strong id="statHigh">0</strong><span>High-risk signals</span><small id="statHighMeta">0% need escalation or close review</small></div>
+        <div class="stat-card-enhanced"><strong id="statDesign">0</strong><span>Needs design review</span><small id="statDesignMeta">0% require UX/product validation</small></div>
+        <div class="stat-card-enhanced"><strong id="statEngineering">0</strong><span>Routed to Engineering</span><small id="statEngineeringMeta">0% may create an engineering bottleneck</small></div>
+        <div class="stat-card-enhanced"><strong id="statCustomer">0</strong><span>Customer-impacting</span><small id="statCustomerMeta">0% affect customer experience or trust</small></div>
+      </div>
+
+      <div class="view-toggle-row" aria-label="Review view controls">
+        <div>
+          <p class="mini-note mb-0">Switch between detailed editing and workflow-state review.</p>
+        </div>
+        <div class="btn-group" role="group" aria-label="Review view mode">
+          <button class="btn btn-outline-light btn-sm is-active" id="tableViewBtn" type="button">Table View</button>
+          <button class="btn btn-ghost btn-sm" id="boardViewBtn" type="button">Board View</button>
+        </div>
+      </div>
+
+      <div class="table-controls" aria-label="Signal table controls">
+        <input id="signalSearchInput" class="form-control" type="search" placeholder="Search signals, reasoning, owner, impact…" />
+        <select id="priorityFilter" class="form-select" aria-label="Filter by priority">
+          <option value="all">All priorities</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <select id="ownerFilter" class="form-select" aria-label="Filter by owner"><option value="all">All owners</option></select>
+        <select id="statusFilter" class="form-select" aria-label="Filter by status"><option value="all">All statuses</option></select>
+        <select id="clusterFilter" class="form-select" aria-label="Filter by cluster"><option value="all">All clusters</option></select>
+        <select id="sortSelect" class="form-select" aria-label="Sort signals">
+          <option value="priorityDesc">Priority: High → Low</option>
+          <option value="priorityAsc">Priority: Low → High</option>
+          <option value="confidenceDesc">Confidence: High → Low</option>
+          <option value="ownerAsc">Owner A → Z</option>
+          <option value="statusAsc">Status A → Z</option>
+          <option value="sourceAsc">Source A → Z</option>
+          <option value="clusterAsc">Cluster A → Z</option>
+        </select>
+        <button id="clearFiltersBtn" class="btn btn-ghost" type="button">Reset</button>
+      </div>
+
+      <div class="table-responsive table-wrap" id="tableViewWrap">
+        <table class="table table-dark table-hover align-middle mb-0 signal-table">
+          <thead><tr><th>Signal</th><th>Priority</th><th>Owner</th><th>Impact</th><th>Status</th><th>Cluster</th><th>Details</th></tr></thead>
+          <tbody id="signalTable"><tr><td colspan="7" class="empty-state">No AI analysis yet. Paste signals or load the sample set.</td></tr></tbody>
+        </table>
+      </div>
+      <section class="review-board mt-3" id="reviewBoard" hidden aria-label="Review board">
+        <p class="empty-state mb-0">Run triage to see signals grouped by recommended workflow state.</p>
+      </section>
+      <div class="step-actions mt-3">
+        <button class="btn btn-primary" id="continueToActionsBottomBtn" type="button" disabled>Continue to Step 3 · Take Action →</button>
+      </div>
+    </section>
+
+
+    <section class="panel mt-3 workflow-step-page" id="step3Panel" hidden aria-label="Step 3 take action">
+      <section class="system-check-panel mt-3" aria-label="API diagnostics">
+        <div class="panel-header mini-panel-header">
+          <div><p class="eyebrow">Step 3 · System Check</p><h2>API Diagnostics</h2></div>
+        </div>
+        <div class="diagnostics-grid mt-3">
+          <div><span>Mode</span><strong id="diagnosticMode">Not run</strong></div>
+          <div><span>Route</span><strong id="diagnosticRoute">—</strong></div>
+          <div><span>Model</span><strong id="diagnosticModel">—</strong></div>
+          <div><span>Run Time</span><strong id="diagnosticTimestamp">—</strong></div>
+        </div>
+        <p class="mini-note mb-0 mt-2" id="diagnosticMessage">Run triage to see whether the live AI route or local fallback generated the result.</p>
+      </section>
+
+      <section class="step3-action-panel mt-3" aria-label="Step 3 handoff choices">
+        <div class="panel-header">
+          <div><p class="eyebrow">Step 3 · Take Action</p><h2>Choose the right handoff</h2></div>
+        </div>
+        <p class="step-panel-copy">Pick the outcome you need: send a ready email, create a ticket document, post a team update, download structured documents, or create a complete handoff package.</p>
+
+        <div class="action-choice-grid">
+          <div class="action-group-label"><span>Communicate</span><p>Email, team-channel, and stakeholder-ready updates generated from the triage.</p></div>
+          <article class="action-choice-card email-choice-card">
+            <span class="choice-kicker">Customer email brief</span>
+            <h3>Ready-to-send email</h3>
+            <p>The subject and message are prepopulated from the triage. Add recipients if you have them, review the wording, then create the email in your default mail app.</p>
+            <label class="form-label" for="emailRecipientsInput">Recipients</label>
+            <input id="emailRecipientsInput" class="form-control" type="text" placeholder="Add recipient email addresses…" />
+            <p class="validation-message" id="emailValidationMessage" aria-live="polite">Enter complete email addresses, separated by commas.</p>
+            <label class="form-label mt-2" for="emailSubjectInput">Subject</label>
+            <input id="emailSubjectInput" class="form-control" type="text" readonly />
+            <label class="form-label mt-2" for="emailBodyInput">Email body</label>
+            <textarea id="emailBodyInput" class="form-control action-template-field" rows="10" readonly></textarea>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <button class="btn btn-primary" id="copyEmailBriefBtn" type="button" disabled>Create Email Template</button>
+            </div>
+          </article>
+
+          <div class="action-group-label"><span>Track work</span><p>Create ticket and action documents for follow-up ownership.</p></div>
+
+          <article class="action-choice-card">
+            <span class="choice-kicker">Issue tracking</span>
+            <h3>Create the top Jira ticket</h3>
+            <p>Use this when the highest-risk signal needs a ticket with priority, owner, evidence, open questions, and recommended workflow already formatted.</p>
+            <pre class="action-preview" id="jiraPreview">Run triage to generate a ticket preview.</pre>
+            <button class="btn btn-outline-light" id="copyTopJiraBtn" type="button" disabled>Create Jira Ticket Doc</button>
+          </article>
+
+          <article class="action-choice-card">
+            <span class="choice-kicker">Team channel</span>
+            <h3>Post a Slack / Teams update</h3>
+            <p>Use this for a quick internal update that summarizes the risk, next actions, and owner routing without the full report.</p>
+            <pre class="action-preview" id="slackPreview">Run triage to generate a team update.</pre>
+            <button class="btn btn-outline-light" id="copySlackBtn" type="button" disabled>Create Team Update Doc</button>
+          </article>
+
+          <div class="action-group-label"><span>Review checkpoint</span><p>Confirm human review before handoff or export.</p></div>
+
+          <article class="action-choice-card">
+            <span class="choice-kicker">Review checkpoint</span>
+            <h3>Mark the run reviewed</h3>
+            <p>Use this after a human has checked the AI output, owner routing, confidence, and open questions.</p>
+            <button class="btn btn-success-soft" id="markReviewedBtn" type="button" disabled>Mark Reviewed</button>
+          </article>
+
+          <article class="action-choice-card">
+            <span class="choice-kicker">Approved work</span>
+            <h3>Create reviewed actions doc</h3>
+            <p>Use this after editing or accepting items. It copies only the reviewed or highest-priority actions for follow-up.</p>
+            <button class="btn btn-outline-light" id="copyReviewedActionsBtn" type="button" disabled>Create Reviewed Actions Doc</button>
+          </article>
+
+          <article class="action-choice-card">
+            <span class="choice-kicker">Stakeholder summary</span>
+            <h3>Executive summary</h3>
+            <p>Use this for a concise stakeholder readout: signals found, top risks, confidence, and next step.</p>
+            <pre class="action-preview" id="executivePreview">Run triage to generate an executive summary.</pre>
+            <button class="btn btn-outline-light" id="copySummaryBtn" type="button" disabled>Create Executive Summary Doc</button>
+          </article>
+
+          <article class="action-choice-card">
+            <span class="choice-kicker">Complete handoff</span>
+            <h3>Create full handoff package</h3>
+            <p>Use this when PM, Design, Engineering, Support, or leadership needs one package with summary, risks, action plan, clusters, and tickets.</p>
+            <button class="btn btn-outline-light" id="copyHandoffBtn" type="button" disabled>Create Handoff Package Doc</button>
+          </article>
+
+          <div class="action-group-label"><span>Save & export</span><p>Move structured triage output into docs, repos, spreadsheets, or archives.</p></div>
+
+          <article class="action-choice-card">
+            <span class="choice-kicker">Download documents</span>
+            <h3>Export structured files</h3>
+            <p>Use exports when the output needs to move into a repo, spreadsheet, design doc, or stakeholder archive.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-outline-light" id="exportBtn" type="button" disabled>Export JSON</button>
+              <button class="btn btn-outline-light" id="exportCsvBtn" type="button" disabled>Export CSV</button>
+              <button class="btn btn-outline-light" id="exportMarkdownBtn" type="button" disabled>Export Markdown</button>
+              <button class="btn btn-primary" id="exportAuditReportBtn" type="button" disabled>Feedback Audit Report</button>
+            </div>
+          </article>
+        </div>
+
+        <aside class="generated-artifact-panel" id="generatedArtifactPanel" hidden>
+          <span>Generated document</span>
+          <p id="generatedArtifactMessage">No document generated yet.</p>
+        </aside>
+      </section>
+
+      <section class="step3-save-panel mt-3" aria-label="Saved sessions">
+      <div class="panel-header">
+        <div><p class="eyebrow">Step 3 · Save</p><h2>Saved Sessions</h2></div>
+        <span class="badge-soft">Ready for handoff</span>
+      </div>
+      <p class="step-panel-copy">Save the current signal review, reload prior sessions, or start a clean signal when the handoff is complete.</p>
+      <div class="step3-save-grid">
+        <article class="action-choice-card action-choice-card-primary">
+          <span class="choice-kicker">Keep this run</span>
+          <h3>Save Signal</h3>
+          <p>Store the current triage locally so you can return to the reviewed signals, sources, decisions, and handoff actions later.</p>
+          <label class="form-label" for="saveSignalNameInput">Signal name</label>
+          <input id="saveSignalNameInput" class="form-control" type="text" placeholder="Name this saved signal…" />
+          <div class="save-name-controls d-flex flex-wrap align-items-center gap-3">
+            <div class="form-check form-switch default-name-switch">
+              <input class="form-check-input" id="useDefaultSignalNameBtn" type="checkbox" role="switch" />
+              <label class="form-check-label" for="useDefaultSignalNameBtn">Use default naming</label>
+            </div>
+            <button class="btn btn-success-soft" id="saveSignalBtn" type="button" disabled>Save Signal</button>
+          </div>
+          <p class="validation-message" id="saveSignalValidation" aria-live="polite">Enter a signal name or use the default name before saving.</p>
+        </article>
+        <article class="action-choice-card">
+          <span class="choice-kicker">Start over</span>
+          <h3>Start New Signal</h3>
+          <p>Clear this intake and return to Step 1 with an empty signal, source tray, and review state.</p>
+          <button class="btn btn-outline-light" id="startNewSignalBtn" type="button">Start New Signal</button>
+        </article>
+      </div>
+
+      <div class="session-controls mt-3" aria-label="Saved analysis sessions">
+        <div class="session-list-header">
+          <div>
+            <span class="choice-kicker">Saved signal list</span>
+            <h3>Saved Signals</h3>
+          </div>
+          <span class="saved-session-count" id="savedSessionCount">0 saved</span>
+        </div>
+        <p class="step-panel-copy mb-3">Saved signals appear here immediately after saving. Use Load to reopen a prior triage run or Delete to remove it from local storage.</p>
+        <div class="saved-session-list" id="savedSessionList" role="list">
+          <p class="empty-state mb-0">No saved signals yet. Save the current signal review to add it to this list.</p>
+        </div>
+      </div>
+
+      </section>
+    </section>
+
+    <section class="panel paid-offer-panel mt-3" id="paidOffer" aria-label="Product feedback triage audit offer">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Paid service MVP</p>
+          <h2>Product Feedback Triage Audit</h2>
+        </div>
+        <span class="badge-soft">Starting at $750</span>
+      </div>
+      <p class="step-panel-copy">Send recent support tickets, research notes, QA findings, customer complaints, or product feedback. SignalDesk AI turns the mess into a reviewed product/UX action report your team can use for roadmap, prioritization, and stakeholder alignment.</p>
+      <div class="offer-grid">
+        <article class="offer-card">
+          <span class="choice-kicker">Starter Audit</span>
+          <h3>$750</h3>
+          <p>Up to 100 feedback items, top themes, highest-priority risks, and a concise action report.</p>
+        </article>
+        <article class="offer-card">
+          <span class="choice-kicker">Growth Audit</span>
+          <h3>$1,500</h3>
+          <p>Up to 500 feedback items, duplicate clusters, roadmap-ready recommendations, and a 60-minute readout.</p>
+        </article>
+        <article class="offer-card">
+          <span class="choice-kicker">Team Workshop</span>
+          <h3>$3,000</h3>
+          <p>Up to 1,500 feedback items, a custom report, team workshop, and follow-up handoff package.</p>
+        </article>
+      </div>
+      <div class="deliverable-strip" aria-label="Audit deliverables">
+        <span>Executive summary</span>
+        <span>Top UX/product risks</span>
+        <span>Duplicate issue clusters</span>
+        <span>Recommended owners</span>
+        <span>Jira-ready tickets</span>
+        <span>CSV/Markdown exports</span>
+      </div>
+      <div class="d-flex flex-wrap gap-2 mt-3">
+        <a class="btn btn-primary" href="mailto:hello@tfeeney-design.com?subject=Book%20a%20SignalDesk%20AI%20Feedback%20Audit">Book a Feedback Audit</a>
+        <a class="btn btn-outline-light" href="#workspace">Try the Demo First</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-shell footer">SignalDesk AI · Product Feedback Triage · Human-reviewed AI workflow · v1.8</footer>
+
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="info-drawer" id="infoDrawer" aria-hidden="true" aria-labelledby="drawerTitle">
+    <div class="drawer-header">
+      <div>
+        <p class="eyebrow">Portfolio framing</p>
+        <h2 id="drawerTitle">How the system works</h2>
+      </div>
+      <button class="drawer-close" id="drawerClose" type="button" aria-label="Close drawer">×</button>
+    </div>
+
+    <div class="drawer-tabs" role="tablist" aria-label="Portfolio framing sections">
+      <button class="drawer-tab is-active" type="button" data-drawer-topic="how" role="tab" aria-selected="true">How it works</button>
+      <button class="drawer-tab" type="button" data-drawer-topic="principles" role="tab" aria-selected="false">Design principles</button>
+    </div>
+
+    <section class="drawer-section is-active" data-drawer-section="how" aria-label="How it works">
+      <h3>From messy signals to accountable action.</h3>
+      <ol class="process-list drawer-list">
+        <li><strong>Collect sources</strong><span>Paste notes, attach lightweight files, or add source URLs.</span></li>
+        <li><strong>Normalize signals</strong><span>Convert scattered inputs into reviewable rows with source context.</span></li>
+        <li><strong>Prioritize and route</strong><span>Score risk, assign likely owners, and surface business impact.</span></li>
+        <li><strong>Cluster patterns</strong><span>Expose repeated issues and likely duplicate groups before handoff.</span></li>
+        <li><strong>Human review</strong><span>Edit the AI output, save the session, and export structured next steps.</span></li>
+      </ol>
+    </section>
+
+    <section class="drawer-section" data-drawer-section="principles" aria-label="Design principles">
+      <h3>Enterprise AI should explain itself.</h3>
+      <div class="principle-list drawer-list">
+        <div><strong>Human-in-the-loop, not autopilot</strong><span>AI drafts the triage; people own the decision.</span></div>
+        <div><strong>Explain before asking for trust</strong><span>Every recommendation includes reasoning, evidence, confidence, and open questions.</span></div>
+        <div><strong>Design for review, not chat</strong><span>The workflow emphasizes tables, filters, assignment, exports, and accountability.</span></div>
+        <div><strong>Make patterns visible</strong><span>Clusters reveal where separate inputs are really the same operational problem.</span></div>
+      </div>
+    </section>
+  </aside>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="appToast" class="toast signal-toast"><div class="toast-body" id="toastBody">Done.</div></div></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="js/ai-enterprise.js"></script>
+</body>
+</html>

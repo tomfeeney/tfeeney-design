@@ -1,0 +1,8 @@
+# Server-side protection template for private/NDA portfolio work.
+# Put this in a private Audi folder ONLY after creating the .htpasswd file.
+# Example protected location: /private/audi/.htaccess
+
+AuthType Basic
+AuthName "Restricted Portfolio Case Study"
+AuthUserFile /ABSOLUTE/SERVER/PATH/TO/.htpasswd
+Require valid-user

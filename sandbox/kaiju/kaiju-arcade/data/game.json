@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "profiles": {
+    "godzilla": {"name":"Godzilla","health":190,"speed":245,"energyRegen":9,"energyDrain":27,"damage":45,"shieldRegen":0.12,"roarDamage":65},
+    "mecha": {"name":"Mechagodzilla","health":155,"speed":295,"energyRegen":7,"energyDrain":23,"damage":53,"shieldRegen":0.10,"roarDamage":58}
+  },
+  "difficulties": {
+    "easy": {"name":"Rookie","enemyHealth":0.8,"enemySpeed":0.8,"enemyDamage":0.65,"spawnInterval":1.2,"scoreMultiplier":0.75},
+    "normal": {"name":"Arcade","enemyHealth":1,"enemySpeed":1,"enemyDamage":1,"spawnInterval":1,"scoreMultiplier":1},
+    "hard": {"name":"Veteran","enemyHealth":1.25,"enemySpeed":1.15,"enemyDamage":1.25,"spawnInterval":0.85,"scoreMultiplier":1.5}
+  },
+  "combat": {"oxygenSeconds":8,"diveRecoverySeconds":3,"shieldCharges":3,"beamRange":1050,"roarCost":25,"roarDuration":1.8,"ragePerKill":17,"maxProjectiles":26,"maxParticles":180},
+  "enemies": {
+    "interceptor": {"health":30,"speed":170,"damage":12,"score":200,"width":145,"height":104,"cooldown":3.5,"role":"Fast interceptor","asset":"jet1"},
+    "gunship": {"health":55,"speed":115,"damage":18,"score":350,"width":125,"height":90,"cooldown":2.6,"role":"Missile attacker","asset":"jet2"},
+    "bomber": {"health":100,"speed":75,"damage":24,"score":650,"width":240,"height":110,"cooldown":2.8,"role":"Bomb carpet","asset":"bomber1"}
+  },
+  "districts": [
+    {"id":"harbor","title":"01 · TOKYO BAY","name":"Harbor Awakening","target":6,"spawnSeconds":2.4,"healthScale":1,"weights":{"interceptor":5,"gunship":3,"bomber":1},"scene":"originalWave","focus":0.05,"story":"A seismic pulse rises beneath Tokyo Bay. Interceptors, missile aircraft, and bombers guard the shipping channel. Break their formation and reclaim the harbor.","objective":"Break the harbor defense line. Fire at aircraft; dive beneath their missiles."},
+    {"id":"fuji","title":"02 · SHADOW OF FUJI","name":"Fuji Coast","target":8,"spawnSeconds":2.1,"healthScale":1.15,"weights":{"interceptor":3,"gunship":3,"bomber":2},"scene":"fuji","focus":0.5,"story":"The pursuit follows the coastline under Mount Fuji. Bombers close the safe water lanes while missile aircraft keep you under pressure.","objective":"Survive the coastal barrage. Watch bombers and time your dives."},
+    {"id":"tokyo","title":"03 · TOKYO AFTERSHOCK","name":"Tokyo Skyline","target":10,"spawnSeconds":1.9,"healthScale":1.3,"weights":{"interceptor":2,"gunship":4,"bomber":2},"scene":"tokyo","focus":0.82,"story":"Tokyo Tower and Skytree rise through the smoke. The fleet locks the bay. Defeat the final air patrol, then sink the flagship Kirin to reach the open sea.","objective":"Break the final air defense and sink the destroyer."}
+  ],
+  "boss": {"name":"KIRIN · MISSILE DESTROYER","health":360,"score":3500,"damage":26,"sinkSeconds":4.5,"phases":[{"threshold":1,"interval":3,"salvo":1},{"threshold":0.65,"interval":2.5,"salvo":2},{"threshold":0.3,"interval":2,"salvo":3}]},
+  "upgrades": [
+    {"id":"repair","name":"Regeneration","description":"Restore 65 health and all energy."},
+    {"id":"power","name":"Atomic Overdrive","description":"Permanent +20% beam and roar damage."},
+    {"id":"shield","name":"Shield Surge","description":"Restore shields, energy, and roar."}
+  ]
+}

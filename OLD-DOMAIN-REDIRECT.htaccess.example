@@ -1,0 +1,5 @@
+# Place this on the OLD iguanaman.com Apache hosting account.
+# It permanently redirects every old path to the matching path on tfeeney-design.com.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?iguanaman\.com$ [NC]
+RewriteRule ^(.*)$ https://tfeeney-design.com/$1 [R=301,L,NE]

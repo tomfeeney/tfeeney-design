@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#000000" name="theme-color"/><script>
+    document.documentElement.classList.add('js');
+  </script>
+<title>Kaijū Run | AI-Assisted Product Design &amp; Game UX Case Study</title>
+<meta content="Independent product design case study for a playable browser game covering 0-to-1 strategy, game UX, HUD hierarchy, interaction feedback, visual direction, and front-end development." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://www.tfeeney-design.com/kaiju.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Kaijū Run — AI-Assisted Product Design Case Study" property="og:title"/>
+<meta content="A playable 0-to-1 product-design experiment spanning game UX, HUD hierarchy, interaction feedback, visual direction, and front-end development." property="og:description"/>
+<meta content="https://www.tfeeney-design.com/kaiju.html" property="og:url"/>
+<meta content="https://www.tfeeney-design.com/imgs/kaiju/kaiju-thumb.webp" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Kaijū Run — Tom Feeney" name="twitter:title"/>
+<meta content="Playable 0-to-1 product design, game UX, HUD hierarchy, interaction feedback, and front-end implementation." name="twitter:description"/>
+<meta content="https://www.tfeeney-design.com/imgs/kaiju/kaiju-thumb.webp" name="twitter:image"/>
+<link href="imgs/logos/mark.svg" rel="icon" sizes="32x32"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/><link href="css/styles-motion.css" rel="stylesheet"/>
+<script defer="" src="js/motion.js"></script></head>
+<body class="screen-effect" data-motion-page="kaiju">
+<main>
+<!-- HERO -->
+<section class="cs-parallax-kaiju-cs position-relative overflow-hidden" data-parallax-section="" id="intro">
+<div class="container intro-txt">
+<div class="row align-items-center g-4 intro-nav">
+<nav aria-label="Primary" class="site-nav">
+<img alt="Tom Feeney logo" class="img-fluid d-block" decoding="async" draggable="false" height="60" loading="lazy" src="imgs/logos/mark.svg" width="60"/>
+<div class="site-nav-links">
+<a class="site-nav-link" href="index.html">HOME</a>
+<a class="site-nav-link" href="work.html">WORK</a>
+<a aria-current="page" class="site-nav-link is-active" href="index.html#sandbox">AI SANDBOX</a>
+<a class="site-nav-link" href="consulting.html">CONSULTING</a>
+</div>
+</nav>
+</div>
+<div class="row align-items-center g-4 intro-me" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="col-lg-8">
+<p class="project-label mb-2">Independent Product Design · Playable Prototype · v0.97</p>
+<h3 class="h4">Kaijū Run | 怪獣ラン</h3>
+<p class="mb-4">A <strong>playable browser game</strong> I designed and built from concept to launch, combining <strong>0-to-1 product design</strong>, <strong>game UX</strong>, <strong>HUD hierarchy</strong>, <strong>visual direction</strong>, and <strong>front-end development</strong>.</p>
+
+<a class="btn btn-outline-light case-study-btn" href="sandbox/kaiju/kaiju-run.html" rel="noopener noreferrer" target="_blank">
+                  Play Game
+                </a>
+</div>
+<div class="col-lg-4">
+<div class="work-thumb work-thumb-kaiju overflow-hidden rounded-3"></div>
+</div>
+</div>
+<div class="row intro-mouse">
+<div class="col-12">
+<div class="d-flex justify-content-center">
+<div class="scroll-icon" data-animate="fade" style="--motion-delay: 400ms;">
+<a aria-label="Scroll to overview" class="d-inline-block" href="#overview">
+<img alt="" aria-hidden="true" class="img-fluid d-block" decoding="async" draggable="false" height="640" loading="lazy" src="imgs/logos/animation-mouse.webp" width="640"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- OVERVIEW -->
+<section class="gc-overview body-copy" id="overview">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-5">
+<div class="col-12">
+<h2 class="gc-section-title">My Role</h2>
+</div>
+</div>
+<div class="row g-4 align-items-start">
+<div class="col-lg-3">
+<div class="text-center">
+<img alt="Kaijū Run icon" class="sandbox-card-logo" decoding="async" height="102" loading="lazy" src="imgs/kaiju/kaiju-icon.svg" width="206"/>
+<hr class="gc-overview-rule"/>
+<p class="gc-overview-label">Product Design + Front-End</p>
+</div>
+</div>
+<div class="col-lg-9">
+<p class="gc-copy"><strong>Kaijū Run</strong> started with a simple question: could I turn a loose game idea into a complete, playable product using AI-assisted tools without giving up design judgment?</p>
+<p class="gc-copy">I owned the <strong>full product cycle</strong>—product definition, gameplay structure, interaction design, visual direction, implementation, testing, and refinement.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- STORY / PROBLEM -->
+<section class="gc-lesson-dark body-copy">
+<div class="container txt-white" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Background</h2>
+<p class="gc-lesson-title">Turning a loose arcade idea into a functional, testable product.</p>
+</div>
+</div>
+<div class="row mb-5 g-4">
+<div class="col-lg-6">
+<img alt="Kaijū character firing green atomic energy across Tokyo Bay" class="rounded-3 gc-lesson-image" decoding="async" draggable="false" height="941" loading="lazy" src="imgs/kaiju/kaiju-01.webp" data-animate="slide-left" style="--motion-delay: 200ms;" width="1672"/>
+<p class="gc-caption">Early visual direction for Godzilla's Atomic Blast.</p>
+</div>
+<div class="col-lg-6">
+<img alt="Kaijū character firing green atomic energy across Tokyo Bay" class="rounded-3 gc-lesson-image" decoding="async" draggable="false" height="941" loading="lazy" src="imgs/kaiju/kaiju-02.webp" data-animate="slide-right" style="--motion-delay: 200ms;" width="1672"/>
+<p class="gc-caption">Early visual direction for Mechagodzilla.</p>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">Most AI experiments stop at a prompt. I wanted to build something people could actually play.</p>
+<p class="gc-copy">The challenge: keep enemies, attacks, resources, alerts, and progression readable at speed.</p>
+</div>
+</div>
+</div></section>
+<!-- STRATEGY -->
+<section class="gc-lesson body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Design Strategy</h2>
+<p class="gc-lesson-title">Keep a fast game clear under pressure.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">The loop: <strong>learn</strong>, <strong>survive</strong>, <strong>manage resources</strong>, <strong>defeat the boss</strong>, and <strong>reach Tokyo</strong>.</p>
+<p class="gc-copy">Health and energy stay left, abilities right, and progression centered.</p>
+<p class="gc-copy">Prompts—<strong>Incoming Jets</strong>, <strong>Bomber Alert</strong>, <strong>Sink the Destroyer</strong>, and <strong>Tokyo’s Defenseless</strong>—explain each change and next action.</p>
+</div>
+</div>
+</section>
+<!-- AI WORKFLOW -->
+<section class="gc-lesson-light body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">AI-Assisted Workflow</h2>
+<p class="gc-lesson-title">AI sped up execution; design judgment set the direction.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">AI supported mechanics, JavaScript, debugging, and visual exploration.</p>
+<p class="gc-copy">I owned the product structure, hierarchy, gameplay, testing, and quality. Built with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript Canvas</strong>.</p>
+<p class="gc-copy">Play-testing reduced clutter, improved pacing, and strengthened cross-screen behavior.</p>
+</div>
+</div>
+</section>
+<!-- GAME LOOP -->
+<section class="gc-lesson body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Solution</h2>
+<p class="gc-lesson-title">Clear progression with escalating pressure.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy"><strong>Choose:</strong> Godzilla or Mechagodzilla, balanced by shared rules.</p>
+<p class="gc-copy"><strong>Learn:</strong> The first wave introduces the controls.</p>
+<p class="gc-copy"><strong>Adapt:</strong> Later waves add pressure and tighter decisions.</p>
+<p class="gc-copy"><strong>Manage:</strong> Resources create tactical tradeoffs.</p>
+<p class="gc-copy"><strong>Finish:</strong> Sink the destroyer and reach Tokyo.</p>
+</div>
+</div>
+</section>
+<!-- PLAYABLE CTA -->
+<section class="gc-lesson-light body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Playable Prototype</h2>
+<p class="gc-lesson-title">Playable in-browser on desktop and mobile.</p>
+</div>
+</div>
+<div class="row mb-5 g-4">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<img alt="Kaijū Run gameplay with enemy attack and wave UI" class="rounded-3 gc-lesson-image" decoding="async" draggable="false" height="935" loading="lazy" src="imgs/kaiju/kaiju-08.webp" data-animate="fade-in" style="--motion-delay: 200ms;" width="960"/>
+<p class="gc-caption">Kaijū Run gameplay and HUD.</p>
+</div>
+<div class="col-lg-2"></div>
+</div>
+<div class="row mb-5 align-items-start middle">
+<div class="col-lg-12">
+<a class="btn btn-outline-light btn-dark" href="sandbox/kaiju/kaiju-run.html" rel="noopener noreferrer" target="_blank">
+ Play Prototype <small>v0.97</small>
+</a>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">The build includes two characters, escalating waves, resources, special attacks, a boss, scoring, trivia, and touch controls.</p>
+<p class="gc-copy">It is designed to be understood quickly and played without instructions.</p>
+</div>
+</div>
+</section>
+<!-- MECHANICS GROUPED -->
+<section class="gc-lesson body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Core Design Decisions</h2>
+<p class="gc-lesson-title">A few clear systems keep play readable and balanced.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy"><strong>Shared foundation:</strong> Both characters use the same core rules.</p>
+<p class="gc-copy"><strong>Resource choices:</strong> Health, energy, shields, and abilities create tradeoffs.</p>
+<p class="gc-copy"><strong>Readable threats:</strong> Consistent patterns keep difficulty fair.</p>
+<p class="gc-copy"><strong>Visible progress:</strong> Boss states clearly show advancement.</p>
+<p class="gc-copy"><strong>Replay value:</strong> Scoring rewards survival, speed, and completion.</p>
+<p class="gc-copy"><strong>Optional mode:</strong> Trivia adds quick rounds and immediate feedback.</p>
+</div>
+</div>
+</section>
+<!-- KAIJU ATTRIBUTES -->
+<section class="gc-lesson-grad-ai body-copy">
+<div class="container txt-white" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Character System</h2>
+<p class="gc-lesson-title">Shared mechanics, distinct visual and audio identities.</p>
+</div>
+</div>
+<div class="row mb-5 g-4">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+<img alt="Mechanical kaijū firing a red laser" class="rounded-3 gc-lesson-image" decoding="async" draggable="false" height="945" loading="lazy" src="imgs/kaiju/kaiju-05.webp"  data-animate="fade-in" style="--motion-delay: 100ms;" width="1600"/>
+<p class="gc-caption">Mechagodzilla’s red energy language contrasts with Godzilla’s green atomic system.</p>
+</div>
+<div class="col-lg-2"></div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy"><strong>Godzilla:</strong> Green atomic effects and an organic, physical identity.</p>
+<p class="gc-copy"><strong>Mechagodzilla:</strong> Red lasers and a heavier, mechanical identity.</p>
+<p class="gc-copy"><strong>Shared baseline:</strong> Core rules stay consistent across both characters.</p>
+</div>
+</div>
+</section>
+<!-- ASSET SYSTEM -->
+<section class="gc-lesson-light body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Visual Production</h2>
+<p class="gc-lesson-title">A focused system kept production fast and cohesive.</p>
+</div>
+</div>
+<div class="row g-4 mb-5">
+<div class="col-12 col-md-6 col-lg-3">
+<div class="d-flex flex-column gap-4">
+<div class="gallery-item overflow-hidden rounded-3" data-animate="scale-in" style="animation-delay: 2.2s;">
+<img alt="Kaijū Run game asset" class="gallery-image gallery-image-color" data-animate="slide-left" decoding="async" draggable="false" height="434" loading="lazy" src="imgs/kaiju/ga-03.webp" width="330"/>
+</div>
+<div class="gallery-item overflow-hidden rounded-3" data-animate="scale-in" style="animation-delay: 1.8s; --motion-delay: 60ms;">
+<img alt="Kaijū Run game asset" class="gallery-image gallery-image-color" data-animate="slide-left" decoding="async" draggable="false" height="248" loading="lazy" src="imgs/kaiju/ga-05.webp" width="330"/>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6 col-lg-3">
+<div class="d-flex flex-column gap-4">
+<div class="gallery-item overflow-hidden rounded-3" data-animate="scale-in" style="animation-delay: 1.2s; --motion-delay: 120ms;">
+<img alt="Kaijū Run game asset" class="gallery-image gallery-image-color" data-animate="scale-in" decoding="async" draggable="false" height="708" loading="lazy" src="imgs/kaiju/ga-01.webp" width="330"/>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6 col-lg-3">
+<div class="d-flex flex-column gap-4">
+<div class="gallery-item overflow-hidden rounded-3" data-animate="scale-in" style="animation-delay: 1.8s; --motion-delay: 180ms;">
+<img alt="Kaijū Run game asset" class="gallery-image gallery-image-color" data-animate="scale-in" decoding="async" draggable="false" height="248" loading="lazy" src="imgs/kaiju/ga-06.webp" width="330"/>
+</div>
+<div class="gallery-item overflow-hidden rounded-3" data-animate="scale-in" style="animation-delay: 2s; --motion-delay: 240ms;">
+<img alt="Kaijū Run game asset" class="gallery-image gallery-image-color" data-animate="scale-in" decoding="async" draggable="false" height="434" loading="lazy" src="imgs/kaiju/ga-04.webp" width="330"/>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-6 col-lg-3">
+<div class="d-flex flex-column gap-4">
+<div class="gallery-item overflow-hidden rounded-3" data-animate="scale-in" style="animation-delay: 2.4s; --motion-delay: 300ms;">
+<img alt="Kaijū Run game asset" class="gallery-image gallery-image-color" data-animate="slide-right" decoding="async" draggable="false" height="708" loading="lazy" src="imgs/kaiju/ga-02.webp" width="330"/>
+</div>
+</div>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy"><strong>Character states:</strong> <code>Godzilla</code>, <code>shielded Godzilla</code>, <code>Mechagodzilla</code>, and <code>shielded Mechagodzilla</code>.</p>
+<p class="gc-copy"><strong>Threat system:</strong> <code>jets</code>, <code>missiles</code>, <code>bombers</code>, <code>bombs</code>, <code>destroyer attacks</code>, and <code>boss states</code>.</p>
+<p class="gc-copy"><strong>Interaction feedback:</strong> <code>green energy</code>, <code>red lasers</code>, <code>impacts</code>, <code>Atomic Roar</code>, <code>shields</code>, and <code>damage states</code>.</p>
+<p class="gc-copy"><strong>Environment system:</strong> <code>water</code>, <code>sky</code>, <code>city</code>, and <code>color variants</code> add depth without clutter.</p>
+<p class="gc-copy"><strong>Audio feedback:</strong> <code>character roars</code>, <code>arcade cues</code>, attacks, and music reinforce key actions.</p>
+</div>
+</div>
+</section>
+<!-- HUD FEEDBACK -->
+<section class="gc-lesson body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">HUD &amp; Feedback</h2>
+<p class="gc-lesson-title">Explain changing conditions in less than a second.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy"><strong>Survival data</strong> stays left, <strong>abilities</strong> right, <strong>progression</strong> centered, and <strong>boss status</strong> appears only when needed.</p>
+<p class="gc-copy">Damage, shields, alerts, and boss feedback explain each event immediately.</p>
+</div>
+</div>
+</section>
+<!-- BALANCE -->
+<section class="gc-lesson-light body-copy">
+<div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Testing &amp; Refinement</h2>
+<p class="gc-lesson-title">Play-testing simplified the interface and improved pacing.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy">Testing exposed unclear states, clutter, timing issues, and uneven difficulty.</p>
+<p class="gc-copy">I tuned <strong>health</strong>, <strong>energy</strong>, and <strong>shields</strong> while reducing clutter and clarifying alerts.</p>
+<p class="gc-copy">Trivia uses a <strong>15-second timer</strong>, clear states, and immediate feedback.</p>
+</div>
+<div class="gc-lesson-copy-wrap">
+<div aria-label="Kaijū Run arcade update" class="gc-arcade-callout" data-animate="slide-up">
+<p class="gc-arcade-attract">Play Kaijū Run</p>
+<p class="gc-lesson-title">Version 0.97 is playable now.</p>
+<p class="gc-copy">Choose a kaijū, survive the waves, sink the destroyer, or play trivia.</p>
+<div aria-label="Kaijū Run key actions" class="gc-arcade-strip">
+<span>Move</span>
+<span>Blast</span>
+<span>Shield</span>
+<span>Atomic Roar</span>
+<span>Trivia</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TAKEAWAYS -->
+<section class="gc-lesson-grad-ai body-copy">
+<div class="container txt-white" data-animate="slide-down" style="--motion-delay: 100ms;">
+<div class="row mb-4">
+<div class="col-12">
+<h2 class="gc-section-title mb-3">Outcome</h2>
+<p class="gc-lesson-title">What the project demonstrates.</p>
+</div>
+</div>
+<div class="gc-lesson-copy-wrap">
+<p class="gc-copy"><strong>01</strong><br/> Shipped a complete, publicly playable browser product.</p>
+<p class="gc-copy"><strong>02</strong><br/> Used prototyping to uncover states, feedback needs, and edge cases.</p>
+<p class="gc-copy"><strong>03</strong><br/> Applied the same clarity, hierarchy, and feedback principles used in enterprise UX.</p>
+</div>
+<div class="row mb-4 mt-5 gc-outro-copy middle">
+<p class="gc-copy"><strong>Role:</strong> Product Definition, Game UX, Interaction Design, Visual Direction, Front-End Development</p>
+<p class="gc-copy"><strong>Tools:</strong> ChatGPT, image generation, AI-assisted coding, HTML, CSS, JavaScript Canvas, Bootstrap, browser QA</p>
+</div>
+</div>
+</section>
+
+
+<section class="related-work body-copy" aria-labelledby="relatedWorkTitle">
+  <div class="container" data-animate="slide-down" style="--motion-delay: 100ms;">
+    <div class="related-work-inner">
+      <p class="case-study-eyebrow" data-animate="slide-down">More Case Studies</p>
+
+      <h2 id="relatedWorkTitle" class="related-work-title">
+        Explore More Product Design Work
+      </h2>
+
+      <nav class="related-work-nav" aria-label="Related case studies">
+        <a href="apl-maps.html">Apple Maps</a>
+        <span aria-hidden="true">|</span>
+        <a href="apl-topline.html">Apple Topline</a>
+        <span aria-hidden="true">|</span>
+        <a href="audi-adas.html">Audi ADAS HMI</a>
+        <span aria-hidden="true">|</span>
+        <a href="ebay-hub.html">eBay HUB</a>
+        <span aria-hidden="true">|</span>
+        <a href="tesla.html">Tesla Fleet &amp; Energy</a>
+        <span aria-hidden="true">|</span>
+        <a href="kaiju.html">Kaijū Run</a>
+        <span aria-hidden="true">|</span>
+        <a href="ai-enterprise.html">AI Enterprise UX Intelligence</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+<footer class="site-footer-converted text-white" id="footer">
+<div class="container">
+<div class="row align-items-center g-5 footer-top">
+<div class="col-lg-6">
+<p class="footer-lead mb-4 middle">Feel free to hit me up. I'm looking forward to hearing from you.</p>
+<div class="d-flex flex-wrap justify-content-center gap-3 footer-socials">
+<a aria-label="GitHub" class="footer-social-link" href="https://github.com/tomfeeney" rel="noopener noreferrer" target="_blank">
+<img alt="GitHub" decoding="async" draggable="false" height="499" loading="lazy" src="imgs/logos/github-white.svg" width="512"/>
+</a>
+<a aria-label="LinkedIn" class="footer-social-link" href="https://www.linkedin.com/in/tommyfeeney/" rel="noopener noreferrer" target="_blank">
+<img alt="LinkedIn" decoding="async" draggable="false" height="512" loading="lazy" src="imgs/logos/linkedin.svg" width="512"/>
+</a>
+<a aria-label="Resume" class="footer-social-link" href="docs/tf-2026.pdf" rel="noopener noreferrer" target="_blank">
+<img alt="Resume" decoding="async" draggable="false" height="512" loading="lazy" src="imgs/logos/resume.svg" width="512"/>
+</a>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="footer-contact text-center">
+<a aria-label="Back to top" class="d-inline-flex mb-3" href="#intro">
+<img alt="" decoding="async" draggable="false" height="60" loading="lazy" src="imgs/logos/mark.svg" width="60"/>
+</a>
+<a class="footer-email d-block" href="mailto:tom@tfeeney-design.com">
+      tom@tfeeney-design.com
+    </a>
+</div>
+</div>
+</div>
+<nav aria-label="Footer navigation" class="footer-nav mt-5">
+<ul class="nav justify-content-center flex-wrap footer-menu">
+<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+<li class="nav-item"><a class="nav-link" href="work.html">WORK</a></li>
+<li class="nav-item"><a class="nav-link" href="index.html#sandbox">AI SANDBOX</a></li>
+<li class="nav-item"><a class="nav-link" href="consulting.html">CONSULTING</a></li>
+</ul>
+</nav>
+<div class="footer-meta mt-4 text-center">
+<p class="mb-1">Tom Feeney · Senior Product Designer · Enterprise AI · Data Platforms</p>
+<p class="mb-1">Kaijū Run v0.97 · Trivia Mode</p>
+<p class="mb-1">
+ Godzilla, Mechagodzilla, related character names, likenesses, and marks are trademarks and copyrights of TOHO CO., LTD.
+ </p>
+<p class="mb-0">
+ © 2026 ·
+ <a href="privacy-policy.html" rel="noopener noreferrer" target="_blank">
+ Privacy policy
+ </a>
+</p>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

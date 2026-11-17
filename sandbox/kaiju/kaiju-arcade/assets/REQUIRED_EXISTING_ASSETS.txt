@@ -1,0 +1,22 @@
+These existing assets must also be uploaded to /sandbox/kaiju/assets/:
+
+godzilla-exact.webp
+godzilla-shield-exact.webp
+mecha-exact.webp
+mecha-shield-exact.webp
+destroyer.webp
+jet_001.webp
+jet_002.webp
+jet_003.webp
+wave_plain.webp
+wave_paint.webp
+wave_blue.webp
+wave_red.webp
+laser-weap.webp
+laser-weap-red.webp
+bomb.webp
+kaiju-roar.webp
+kaiju-shield.svg
+kaiju-roar.svg
+godzilla_roar.mp3
+mecha_godzilla_roar.mp3

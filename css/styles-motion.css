@@ -1,0 +1,351 @@
+/* =========================
+   PORTFOLIO MOTION V6
+   Production polish: mobile tuning, active nav, hero consistency, reliable reveals
+   Load after css/styles.css
+========================= */
+
+:root {
+  --motion-duration: 680ms;
+  --motion-distance: 28px;
+  --motion-blur: 6px;
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-parallax-strength: 64px;
+}
+
+[data-parallax-section] {
+  --case-parallax-offset: 0px;
+}
+
+/* Active navigation state
+   Keep aria-current/is-active for accessibility only.
+   No visual underline or nav styling changes. */
+.site-nav-link.is-active,
+.site-nav-link[aria-current="page"] {
+  opacity: inherit;
+}
+
+.site-nav-link.is-active::after,
+.site-nav-link[aria-current="page"]::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Hero consistency across portfolio pages */
+body[data-motion-page] #intro .intro-nav {
+  padding-block: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+body[data-motion-page] #intro .intro-me {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+body[data-motion-page] #intro .work-thumb {
+  max-width: min(100%, 560px);
+  margin-inline: auto;
+}
+
+body[data-motion-page] #intro .project-label,
+body[data-motion-page] #intro small {
+  display: inline-block;
+}
+
+/* The .js class is added inline in the head so content only hides when JS can reveal it. */
+.js [data-animate] {
+  opacity: 0;
+  transform: translateY(var(--motion-distance));
+  filter: blur(var(--motion-blur));
+  transition:
+    opacity var(--motion-duration) ease,
+    transform var(--motion-duration) var(--motion-ease),
+    filter var(--motion-duration) ease;
+  transition-delay: var(--motion-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.js [data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.js [data-animate="slide-up"] {
+  transform: translateY(var(--motion-distance));
+}
+
+.js [data-animate="slide-down"] {
+  transform: translateY(calc(var(--motion-distance) * -1));
+}
+
+.js [data-animate="slide-down"].is-visible {
+  transform: translateY(0);
+}
+
+.js [data-animate="slide-left"] {
+  transform: translateX(calc(var(--motion-distance) * -1.35));
+}
+
+.js [data-animate="slide-left"].is-visible {
+  transform: translateX(0);
+}
+
+.js [data-animate="slide-right"] {
+  transform: translateX(calc(var(--motion-distance) * 1.35));
+}
+
+.js [data-animate="slide-right"].is-visible {
+  transform: translateX(0);
+}
+
+.js [data-animate="scale-in"] {
+  transform: translateY(16px) scale(0.965);
+}
+
+.js [data-animate="scale-in"].is-visible {
+  transform: translateY(0) scale(1);
+}
+
+.js [data-animate="fade"] {
+  transform: none;
+}
+
+.js [data-animate="fade"].is-visible {
+  transform: none;
+}
+
+.work-thumb[data-animate],
+.gc-lesson-image[data-animate],
+.gc-overview-icon[data-animate],
+.digital-gallery-item[data-animate],
+.digital-gallery-item-zero-rads[data-animate],
+.sandbox-card[data-animate],
+.testimonial-card[data-animate],
+.work-card[data-animate],
+.toolbox-tile[data-animate] {
+  backface-visibility: hidden;
+  transform-origin: center center;
+}
+
+/* Valid Kaiju/CRT overlay. The old selector block in styles.css was nested under :root, so this provides the real working layer. */
+.kaiju-effect {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.kaiju-effect > * {
+  position: relative;
+  z-index: 4;
+}
+
+.kaiju-effect::before,
+.kaiju-effect::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.kaiju-effect::before {
+  z-index: 2;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0 1px, rgba(0,0,0,.07) 1px 4px),
+    radial-gradient(ellipse at center, rgba(0,0,0,0) 58%, rgba(0,0,0,.24) 100%);
+  opacity: .14;
+}
+
+.kaiju-effect::after {
+  z-index: 3;
+  box-shadow:
+    inset 0 0 28px rgba(0,0,0,.24),
+    inset 0 0 72px rgba(0,0,0,.12);
+}
+
+body[data-motion-page="kaiju"] .kaiju-effect::before,
+body.screen-effect .kaiju-effect::before {
+  opacity: .42;
+  animation: motionScanlineDrift 5.5s linear infinite;
+}
+
+body[data-motion-page="digital-sandbox"] .kaiju-effect::before {
+  opacity: .22;
+}
+
+@keyframes motionScanlineDrift {
+  from { background-position: 0 0, center; }
+  to { background-position: 0 14px, center; }
+}
+
+/* Hover polish only for devices where hover is intentional. */
+.gallery-image,
+.toolbox-logo,
+.sandbox-card-logo,
+.testimonial-avatar,
+.digital-gallery-item img,
+.digital-gallery-item-zero-rads img,
+.gc-lesson-image,
+.gc-overview-icon,
+.work-thumb {
+  transition:
+    transform 320ms ease,
+    filter 320ms ease,
+    opacity 320ms ease;
+}
+
+.digital-gallery-item,
+.digital-gallery-item-zero-rads {
+  overflow: hidden;
+}
+
+.work-card,
+.toolbox-tile,
+.case-study-btn,
+.sandbox-btn,
+.btn-dark,
+.page-gate-form .btn {
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gallery-item:hover .gallery-image,
+  .toolbox-tile:hover .toolbox-logo,
+  .sandbox-card:hover .sandbox-card-logo,
+  .testimonial-card:hover .testimonial-avatar,
+  .digital-gallery-item:hover img,
+  .digital-gallery-item-zero-rads:hover img {
+    transform: scale(1.035);
+  }
+
+  .toolbox-tile:hover,
+  .work-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .case-study-btn:hover,
+  .case-study-btn:focus-visible,
+  .sandbox-btn:hover,
+  .sandbox-btn:focus-visible,
+  .btn-dark:hover,
+  .btn-dark:focus-visible,
+  .page-gate-form .btn:hover,
+  .page-gate-form .btn:focus-visible {
+    transform: translateY(-2px);
+  }
+}
+
+/* Scroll affordance: subtle pulse, not a distracting bounce. */
+.scroll-icon.is-visible img,
+.scroll-icon:not([data-animate]) img {
+  animation: motionScrollPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes motionScrollPulse {
+  0%, 100% { transform: translateY(0); opacity: .72; }
+  50% { transform: translateY(7px); opacity: 1; }
+}
+
+/* Page-specific restraint. */
+body[data-motion-page="audi-adas"] {
+  --motion-duration: 780ms;
+  --motion-distance: 22px;
+}
+
+body[data-motion-page="kaiju"] {
+  --motion-duration: 620ms;
+  --motion-distance: 32px;
+}
+
+body[data-motion-page="digital-sandbox"] .digital-gallery-item.is-visible img,
+body[data-motion-page="digital-sandbox"] .digital-gallery-item-zero-rads.is-visible img {
+  transition-duration: 420ms;
+}
+
+/* Mobile: keep motion light and avoid expensive blur/parallax work. */
+@media (max-width: 767.98px) {
+  :root {
+    --motion-duration: 500ms;
+    --motion-distance: 18px;
+    --motion-blur: 0px;
+    --motion-parallax-strength: 0px;
+  }
+
+  body[data-motion-page] #intro .intro-me {
+    padding-block: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .js [data-animate="slide-left"],
+  .js [data-animate="slide-right"] {
+    transform: translateY(var(--motion-distance));
+  }
+
+  .js [data-animate="slide-left"].is-visible,
+  .js [data-animate="slide-right"].is-visible {
+    transform: translateY(0);
+  }
+
+  .js [data-animate] {
+    filter: none;
+  }
+
+  [data-parallax-section] {
+    --case-parallax-offset: 0px !important;
+  }
+
+  .site-nav-link.is-active::after,
+  .site-nav-link[aria-current="page"]::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-animate] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+
+  .gallery-image,
+  .toolbox-logo,
+  .sandbox-card-logo,
+  .testimonial-avatar,
+  .digital-gallery-item img,
+  .digital-gallery-item-zero-rads img,
+  .gc-lesson-image,
+  .gc-overview-icon,
+  .work-thumb,
+  .work-card,
+  .toolbox-tile,
+  .case-study-btn,
+  .sandbox-btn,
+  .btn-dark,
+  .page-gate-form .btn {
+    transition: none;
+  }
+
+  .gallery-item:hover .gallery-image,
+  .toolbox-tile:hover .toolbox-logo,
+  .sandbox-card:hover .sandbox-card-logo,
+  .testimonial-card:hover .testimonial-avatar,
+  .digital-gallery-item:hover img,
+  .digital-gallery-item-zero-rads:hover img,
+  .toolbox-tile:hover,
+  .work-card:hover,
+  .case-study-btn:hover,
+  .sandbox-btn:hover,
+  .btn-dark:hover,
+  .page-gate-form .btn:hover {
+    transform: none;
+  }
+
+  .scroll-icon img,
+  body[data-motion-page="kaiju"] .kaiju-effect::before,
+  body.screen-effect .kaiju-effect::before {
+    animation: none !important;
+  }
+}

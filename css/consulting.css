@@ -1,0 +1,37 @@
+.hero-side-img,
+.gc-lesson-image {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.gc-overview-icon {
+  max-width: 96px;
+}
+
+.gc-overview-label {
+  letter-spacing: 0.02em;
+}
+
+.consulting-txt {
+  text-align: center;
+}
+
+:is(.gc-lesson-dark, .gc-lesson-grad-blue, .gc-lesson-grad-black) .gc-section-title,
+:is(.gc-lesson-dark, .gc-lesson-grad-blue, .gc-lesson-grad-black) .gc-lesson-title {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+:is(.gc-lesson-dark, .gc-lesson-grad-blue, .gc-lesson-grad-black) .gc-copy {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.gc-bullets-white li,
+.gc-bullets-white li::marker {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+@media (max-width: 991.98px) {
+  .gc-lesson-title,
+  .gc-copy {
+    text-align: center;
+  }
+}
